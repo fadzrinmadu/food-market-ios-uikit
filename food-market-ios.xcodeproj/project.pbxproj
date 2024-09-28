@@ -13,6 +13,16 @@
 		154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1372CA821A400078ED4 /* SignInInteractor.swift */; };
 		154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1392CA821F200078ED4 /* SignInPresenter.swift */; };
 		154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB13B2CA8225300078ED4 /* SignInRouter.swift */; };
+		154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB13E2CA837B300078ED4 /* HeaderView.swift */; };
+		154EB1442CA8382F00078ED4 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1432CA8382F00078ED4 /* HeaderView.xib */; };
+		154EB1462CA839FC00078ED4 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1452CA839FC00078ED4 /* Poppins-Light.ttf */; };
+		154EB1482CA84F2900078ED4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1472CA84F2900078ED4 /* UIView+Extension.swift */; };
+		154EB14B2CA8541C00078ED4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB14A2CA8541C00078ED4 /* BaseViewController.swift */; };
+		154EB14F2CA8704D00078ED4 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB14E2CA8704D00078ED4 /* InputTextField.swift */; };
+		154EB1512CA8705900078ED4 /* InputTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1502CA8705900078ED4 /* InputTextField.xib */; };
+		154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1552CA8789600078ED4 /* ColorConstant.swift */; };
+		154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1572CA8792900078ED4 /* FontConstant.swift */; };
+		154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1592CA87C6400078ED4 /* PaddedTextField.swift */; };
 		157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */; };
 		157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */; };
 		157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F82C9554CB005BF7F8 /* Assets.xcassets */; };
@@ -27,6 +37,17 @@
 		154EB1372CA821A400078ED4 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		154EB1392CA821F200078ED4 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		154EB13B2CA8225300078ED4 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		154EB13E2CA837B300078ED4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		154EB1432CA8382F00078ED4 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		154EB1452CA839FC00078ED4 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		154EB1472CA84F2900078ED4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		154EB14A2CA8541C00078ED4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		154EB14E2CA8704D00078ED4 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		154EB1502CA8705900078ED4 /* InputTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextField.xib; sourceTree = "<group>"; };
+		154EB1522CA8711B00078ED4 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		154EB1552CA8789600078ED4 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		154EB1572CA8792900078ED4 /* FontConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstant.swift; sourceTree = "<group>"; };
+		154EB1592CA87C6400078ED4 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		157D31EC2C9554CA005BF7F8 /* food-market-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-market-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +109,73 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		154EB13D2CA8379100078ED4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1422CA8381E00078ED4 /* HeaderView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		154EB1422CA8381E00078ED4 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				154EB13E2CA837B300078ED4 /* HeaderView.swift */,
+				154EB1432CA8382F00078ED4 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		154EB1492CA8540A00078ED4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				154EB14A2CA8541C00078ED4 /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		154EB14C2CA8701A00078ED4 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				154EB14D2CA8704000078ED4 /* InputTextField */,
+				154EB1592CA87C6400078ED4 /* PaddedTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		154EB14D2CA8704000078ED4 /* InputTextField */ = {
+			isa = PBXGroup;
+			children = (
+				154EB14E2CA8704D00078ED4 /* InputTextField.swift */,
+				154EB1502CA8705900078ED4 /* InputTextField.xib */,
+			);
+			path = InputTextField;
+			sourceTree = "<group>";
+		};
+		154EB1532CA8784300078ED4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1542CA8787800078ED4 /* Constants */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		154EB1542CA8787800078ED4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1552CA8789600078ED4 /* ColorConstant.swift */,
+				154EB1572CA8792900078ED4 /* FontConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		154EB15B2CA87E8300078ED4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		157D31E32C9554CA005BF7F8 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				15F294E02CA7D3F700FA1A0E /* Application */,
+				154EB1532CA8784300078ED4 /* Base */,
 				15F294E12CA7D40500FA1A0E /* Components */,
 				15F294E22CA7D40C00FA1A0E /* Data */,
 				15F294E42CA7D41C00FA1A0E /* Helpers */,
@@ -131,6 +220,10 @@
 		15F294E12CA7D40500FA1A0E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				154EB15B2CA87E8300078ED4 /* Buttons */,
+				154EB14C2CA8701A00078ED4 /* TextFields */,
+				154EB1492CA8540A00078ED4 /* ViewControllers */,
+				154EB13D2CA8379100078ED4 /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -202,6 +295,7 @@
 		15F294EB2CA7D55B00FA1A0E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				154EB1472CA84F2900078ED4 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,7 +339,9 @@
 		15F295092CA7ED7E00FA1A0E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				154EB1452CA839FC00078ED4 /* Poppins-Light.ttf */,
 				15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */,
+				154EB1522CA8711B00078ED4 /* Poppins-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -309,6 +405,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */,
+				154EB1462CA839FC00078ED4 /* Poppins-Light.ttf in Resources */,
+				154EB1512CA8705900078ED4 /* InputTextField.xib in Resources */,
+				154EB1442CA8382F00078ED4 /* HeaderView.xib in Resources */,
 				15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
@@ -325,10 +424,17 @@
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
+				154EB14F2CA8704D00078ED4 /* InputTextField.swift in Sources */,
+				154EB1482CA84F2900078ED4 /* UIView+Extension.swift in Sources */,
 				154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */,
+				154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */,
+				154EB14B2CA8541C00078ED4 /* BaseViewController.swift in Sources */,
 				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
 				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
+				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
+				154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */,
+				154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
