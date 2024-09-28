@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1312CA81FBD00078ED4 /* SignInViewController.swift */; };
+		154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1322CA81FBD00078ED4 /* SignInViewController.xib */; };
+		154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1352CA8200300078ED4 /* SignInProtocol.swift */; };
+		154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1372CA821A400078ED4 /* SignInInteractor.swift */; };
+		154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1392CA821F200078ED4 /* SignInPresenter.swift */; };
+		154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB13B2CA8225300078ED4 /* SignInRouter.swift */; };
 		157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */; };
 		157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */; };
-		157D31F42C9554CA005BF7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F32C9554CA005BF7F8 /* ViewController.swift */; };
-		157D31F72C9554CA005BF7F8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F62C9554CA005BF7F8 /* Base */; };
 		157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F82C9554CB005BF7F8 /* Assets.xcassets */; };
 		157D31FC2C9554CB005BF7F8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 157D31FB2C9554CB005BF7F8 /* Base */; };
+		15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		154EB1312CA81FBD00078ED4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		154EB1322CA81FBD00078ED4 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		154EB1352CA8200300078ED4 /* SignInProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
+		154EB1372CA821A400078ED4 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		154EB1392CA821F200078ED4 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		154EB13B2CA8225300078ED4 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		157D31EC2C9554CA005BF7F8 /* food-market-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-market-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		157D31F32C9554CA005BF7F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		157D31F62C9554CA005BF7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		157D31F82C9554CB005BF7F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		157D31FB2C9554CB005BF7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		157D31FD2C9554CB005BF7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		154EB12C2CA81E0B00078ED4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1312CA81FBD00078ED4 /* SignInViewController.swift */,
+				154EB1322CA81FBD00078ED4 /* SignInViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		154EB12D2CA81E1200078ED4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1372CA821A400078ED4 /* SignInInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		154EB12E2CA81E1F00078ED4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				154EB13B2CA8225300078ED4 /* SignInRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		154EB12F2CA81E2600078ED4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1352CA8200300078ED4 /* SignInProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		154EB1302CA81E2C00078ED4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1392CA821F200078ED4 /* SignInPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		157D31E32C9554CA005BF7F8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +107,147 @@
 		157D31EE2C9554CA005BF7F8 /* food-market-ios */ = {
 			isa = PBXGroup;
 			children = (
-				157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */,
-				157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */,
-				157D31F32C9554CA005BF7F8 /* ViewController.swift */,
-				157D31F52C9554CA005BF7F8 /* Main.storyboard */,
-				157D31F82C9554CB005BF7F8 /* Assets.xcassets */,
-				157D31FA2C9554CB005BF7F8 /* LaunchScreen.storyboard */,
+				15F294E02CA7D3F700FA1A0E /* Application */,
+				15F294E12CA7D40500FA1A0E /* Components */,
+				15F294E22CA7D40C00FA1A0E /* Data */,
+				15F294E42CA7D41C00FA1A0E /* Helpers */,
+				15F294E32CA7D41400FA1A0E /* Modules */,
+				15F294E52CA7D42300FA1A0E /* Resources */,
 				157D31FD2C9554CB005BF7F8 /* Info.plist */,
 			);
 			path = "food-market-ios";
+			sourceTree = "<group>";
+		};
+		15F294E02CA7D3F700FA1A0E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */,
+				157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */,
+				157D31FA2C9554CB005BF7F8 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		15F294E12CA7D40500FA1A0E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		15F294E22CA7D40C00FA1A0E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				15F294E82CA7D52000FA1A0E /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		15F294E32CA7D41400FA1A0E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				15F294FF2CA7E22B00FA1A0E /* Authentication */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		15F294E42CA7D41C00FA1A0E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				15F294EB2CA7D55B00FA1A0E /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		15F294E52CA7D42300FA1A0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15F294E62CA7D4A400FA1A0E /* Assets */,
+				15F295092CA7ED7E00FA1A0E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15F294E62CA7D4A400FA1A0E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				157D31F82C9554CB005BF7F8 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		15F294E82CA7D52000FA1A0E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				15F294E92CA7D52A00FA1A0E /* Firebase */,
+				15F294EA2CA7D53000FA1A0E /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		15F294E92CA7D52A00FA1A0E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		15F294EA2CA7D53000FA1A0E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		15F294EB2CA7D55B00FA1A0E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15F294FF2CA7E22B00FA1A0E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				15F295002CA7E23B00FA1A0E /* Domain */,
+				15F295012CA7E24000FA1A0E /* Presentation */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		15F295002CA7E23B00FA1A0E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		15F295012CA7E24000FA1A0E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				15F295022CA7E26A00FA1A0E /* SignIn */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		15F295022CA7E26A00FA1A0E /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				154EB1302CA81E2C00078ED4 /* Presenter */,
+				154EB12F2CA81E2600078ED4 /* Protocol */,
+				154EB12E2CA81E1F00078ED4 /* Router */,
+				154EB12D2CA81E1200078ED4 /* Interactor */,
+				154EB12C2CA81E0B00078ED4 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		15F295092CA7ED7E00FA1A0E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */,
+				15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
-				157D31F72C9554CA005BF7F8 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157D31F42C9554CA005BF7F8 /* ViewController.swift in Sources */,
+				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
+				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
+				154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */,
+				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
+				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		157D31F52C9554CA005BF7F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				157D31F62C9554CA005BF7F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		157D31FA2C9554CB005BF7F8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +477,6 @@
 				INFOPLIST_FILE = "food-market-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +504,6 @@
 				INFOPLIST_FILE = "food-market-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

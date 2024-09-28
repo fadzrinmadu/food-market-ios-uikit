@@ -8,15 +8,13 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // MARK: Creating and displaying the app window when a new scene starts
+        setupWindow(with: scene)
+        setupFirstLayout()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +45,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    private func setupWindow(with scene: UIScene) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        self.window = window
+        self.window?.windowScene = windowScene
+        self.window?.makeKeyAndVisible()
+    }
+    
+    private func setupFirstLayout() {
+        let vc = SignInRouter.createModule()
+        let navigation = UINavigationController(rootViewController: vc)
+        navigation.modalPresentationStyle = .fullScreen
+        self.window?.rootViewController = navigation
+    }
 }
-
