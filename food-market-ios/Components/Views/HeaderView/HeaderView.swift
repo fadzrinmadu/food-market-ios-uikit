@@ -21,14 +21,12 @@ final class HeaderView: UIView {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
-    
-    // MARK: Initializer for when called programmatically
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
-    // MARK: Initializer for when called from a storyboard or XIB
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
@@ -41,6 +39,10 @@ final class HeaderView: UIView {
         
         backButtonView.isHidden = true
         profileView.isHidden = true
+        
+        let backButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(backButtonPressed))
+        backButtonView.addGestureRecognizer(backButtonTapGesture)
+        backButtonView.isUserInteractionEnabled = true
     }
     
     func setupData(data: HeaderViewData) {
@@ -54,6 +56,13 @@ final class HeaderView: UIView {
         if (data.showProfileImage ?? false) {
             profileView.isHidden = false
             profileImageView.image = data.profileImage
+        }
+    }
+    
+    @objc 
+    private func backButtonPressed() {
+        if let viewController = self.parentViewController() {
+            viewController.navigationController?.popViewController(animated: true)
         }
     }
 }

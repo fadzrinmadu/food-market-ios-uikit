@@ -8,9 +8,9 @@
 import UIKit
 
 enum ColorConstant {
-    static let backgroundColor = UIColor(named: "BackgroundColor")
+    static let backgroundColor = UIColor(named: "BackgroundColor") ?? .white
     
-    static let primaryBlack = UIColor(named: "PrimaryBlack")
-    static let primaryGray = UIColor(named: "PrimaryGray")
-    static let primaryYellow = UIColor(named: "PrimaryYellow")
+    static let primaryBlack = UIColor(named: "PrimaryBlack") ?? .white
+    static let primaryGray = UIColor(named: "PrimaryGray") ?? .white
+    static let primaryYellow = UIColor(named: "PrimaryYellow") ?? .white
 }

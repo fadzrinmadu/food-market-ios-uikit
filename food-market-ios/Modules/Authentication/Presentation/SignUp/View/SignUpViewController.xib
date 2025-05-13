@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="food_market_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="teU-QB-4s8" id="2IU-RE-3XD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-fn-Nli" userLabel="Main View">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vy4-1s-AT8">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DTa-6q-2r9">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-T8-Wmn" userLabel="Navigation View">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teU-QB-4s8" customClass="HeaderView" customModule="food_market_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="24" y="30" width="345" height="54"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="108" id="I8s-YL-ev4"/>
+                                                <constraint firstAttribute="bottom" secondItem="teU-QB-4s8" secondAttribute="bottom" constant="24" id="RNd-1v-yWY"/>
+                                                <constraint firstAttribute="trailing" secondItem="teU-QB-4s8" secondAttribute="trailing" constant="24" id="c6A-df-WyB"/>
+                                                <constraint firstItem="teU-QB-4s8" firstAttribute="leading" secondItem="bpk-T8-Wmn" secondAttribute="leading" constant="24" id="dtH-9O-MCx"/>
+                                                <constraint firstItem="teU-QB-4s8" firstAttribute="top" secondItem="bpk-T8-Wmn" secondAttribute="top" constant="30" id="iWP-kt-TTI"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="DTa-6q-2r9" firstAttribute="leading" secondItem="Vy4-1s-AT8" secondAttribute="leading" id="IXc-KB-pQX"/>
+                                <constraint firstAttribute="trailing" secondItem="DTa-6q-2r9" secondAttribute="trailing" id="hq8-JF-ngO"/>
+                                <constraint firstAttribute="bottom" secondItem="DTa-6q-2r9" secondAttribute="bottom" id="ktX-xA-U8t"/>
+                                <constraint firstItem="DTa-6q-2r9" firstAttribute="width" secondItem="Vy4-1s-AT8" secondAttribute="width" id="qoP-HF-jdl"/>
+                                <constraint firstItem="DTa-6q-2r9" firstAttribute="top" secondItem="Vy4-1s-AT8" secondAttribute="top" id="wrQ-0I-nQM"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Vy4-1s-AT8" secondAttribute="bottom" id="GuX-8W-gF0"/>
+                        <constraint firstItem="Vy4-1s-AT8" firstAttribute="top" secondItem="fQa-fn-Nli" secondAttribute="top" id="Y2I-Xa-KaJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Vy4-1s-AT8" secondAttribute="trailing" id="frA-Jl-QN5"/>
+                        <constraint firstItem="Vy4-1s-AT8" firstAttribute="leading" secondItem="fQa-fn-Nli" secondAttribute="leading" id="ge0-En-reA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fQa-fn-Nli" secondAttribute="trailing" id="2Im-jy-JOH"/>
+                <constraint firstItem="fQa-fn-Nli" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QDM-ni-o5x"/>
+                <constraint firstItem="fQa-fn-Nli" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yGy-Yx-NXk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fQa-fn-Nli" secondAttribute="bottom" id="zRj-Gq-oge"/>
+            </constraints>
+            <point key="canvasLocation" x="96.946564885496173" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

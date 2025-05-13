@@ -11,8 +11,6 @@ class SignInViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var emailInputTextField: InputTextField!
     @IBOutlet weak var passwordInputTextField: InputTextField!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var createNewAccountButton: UIButton!
     
     weak var presenter: SignInViewToPresenterProtocol?
     
@@ -43,12 +41,15 @@ class SignInViewController: BaseViewController {
                 isSecure: true
             )
         )
-        
-        signInButton.layer.cornerRadius = 8
-        signInButton.clipsToBounds = true
-        
-        createNewAccountButton.layer.cornerRadius = 8
-        createNewAccountButton.clipsToBounds = true
+    }
+
+    @IBAction func signInButtonPressed(_ sender: MainButton) {
+        // TODO: Sign In
+    }
+    
+    @IBAction func SignUpButtonPressed(_ sender: MainButton) {
+        let vc = SignUpRouter.createModule()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

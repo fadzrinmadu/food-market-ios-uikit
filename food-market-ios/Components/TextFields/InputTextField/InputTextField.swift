@@ -37,7 +37,7 @@ final class InputTextField: UIView {
         
         inputTextField.textColor = ColorConstant.primaryGray
         inputTextField.font = FontConstant.poppinsRegularSmall
-        inputTextField.layer.borderColor = ColorConstant.primaryBlack?.cgColor ?? UIColor.black.cgColor
+        inputTextField.layer.borderColor = ColorConstant.primaryBlack.cgColor
         inputTextField.layer.borderWidth = 1.0
         inputTextField.layer.cornerRadius = 8.0
         inputTextField.clipsToBounds = true
