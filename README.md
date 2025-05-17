@@ -1,10 +1,8 @@
-Progress [1 / 100%]
+Progress [2 / 100%]
 
 Dev :
-- Construct UI sign up page
-- Create component photo profile
+- Construct UI signup address screen
+- Create snackbar component
 
 Todo :
-- Change UI when input state is focus
-- Back button not working
-- Handle input password
+- Area for click on button doesn't filled
