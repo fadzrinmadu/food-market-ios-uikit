@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="food_market_ios" customModuleProvider="target">
             <connections>
+                <outlet property="emailInputTextField" destination="tIb-KG-rS4" id="uAF-ch-LG3"/>
+                <outlet property="fullNameInputTextField" destination="kr4-rm-Wv4" id="SgV-lv-REi"/>
                 <outlet property="headerView" destination="teU-QB-4s8" id="2IU-RE-3XD"/>
+                <outlet property="passwordInputTextField" destination="a4y-Sb-YBp" id="tyI-Hr-9Iq"/>
+                <outlet property="photoProfileView" destination="lIW-YM-m9u" id="rQG-V7-BaE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,8 +30,8 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vy4-1s-AT8">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DTa-6q-2r9">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="DTa-6q-2r9">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="414"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-T8-Wmn" userLabel="Navigation View">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
@@ -45,7 +50,99 @@
                                                 <constraint firstItem="teU-QB-4s8" firstAttribute="top" secondItem="bpk-T8-Wmn" secondAttribute="top" constant="30" id="iWP-kt-TTI"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vF-w5-Vq7" userLabel="Form View">
+                                            <rect key="frame" x="0.0" y="132" width="393" height="282"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-pG-Jvh">
+                                                    <rect key="frame" x="24" y="26" width="345" height="445"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUd-O0-mZV" userLabel="Photo Input View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="110"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIW-YM-m9u" userLabel="Photo Profile View" customClass="PhotoProfileView" customModule="food_market_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="117.66666666666666" y="0.0" width="110" height="110"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="110" id="aUQ-Q0-Uk6"/>
+                                                                        <constraint firstAttribute="height" constant="110" id="jIh-Lq-QhT"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="lIW-YM-m9u" firstAttribute="centerX" secondItem="lUd-O0-mZV" secondAttribute="centerX" id="F3b-l9-1VE"/>
+                                                                <constraint firstItem="lIW-YM-m9u" firstAttribute="centerY" secondItem="lUd-O0-mZV" secondAttribute="centerY" id="Y7J-9e-qgU"/>
+                                                                <constraint firstAttribute="height" constant="110" id="nN9-H4-dEF"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nrt-Ga-oPi" userLabel="Input Stack View">
+                                                            <rect key="frame" x="0.0" y="134" width="345" height="242"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kr4-rm-Wv4" userLabel="Full Name Text Field" customClass="InputTextField" customModule="food_market_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="70" id="5zV-tX-s56"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIb-KG-rS4" userLabel="Email Text Field" customClass="InputTextField" customModule="food_market_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="86" width="345" height="70"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="70" id="Kls-cK-77a"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-Sb-YBp" userLabel="Password Text Field" customClass="InputTextField" customModule="food_market_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="172" width="345" height="70"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="70" id="92A-F3-Uqg"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZBK-E1-AeK" userLabel="Button Stack View">
+                                                            <rect key="frame" x="0.0" y="400" width="345" height="45"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-4b-lPv" userLabel="Sign In Button" customClass="MainButton" customModule="food_market_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="45"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="45" id="T0p-Mo-XXc"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="customTitleColor">
+                                                                            <color key="value" name="PrimaryBlack"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="customBackgroundColor">
+                                                                            <color key="value" name="PrimaryYellow"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="customTitle" value="Continue"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="customCornerRadius">
+                                                                            <real key="value" value="8"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="102" id="dcl-L3-YV0"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="YQa-pG-Jvh" firstAttribute="leading" secondItem="0vF-w5-Vq7" secondAttribute="leading" constant="24" id="GHV-Hx-Oqm"/>
+                                                <constraint firstAttribute="height" constant="282" id="a3m-cm-vjq"/>
+                                                <constraint firstItem="YQa-pG-Jvh" firstAttribute="top" secondItem="0vF-w5-Vq7" secondAttribute="top" constant="26" id="aNV-3T-t4Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="YQa-pG-Jvh" secondAttribute="trailing" constant="24" id="mj0-br-l2G"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" name="BackgroundColor"/>
                                 </stackView>
                             </subviews>
                             <constraints>
@@ -77,7 +174,21 @@
             <point key="canvasLocation" x="96.946564885496173" y="19.718309859154932"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Kfp-4b-lPv">
+            <size key="intrinsicContentSize" width="92.666666666666671" height="34.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryBlack">
+            <color red="0.0080000003799796104" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryYellow">
+            <color red="1" green="0.77999997138977051" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

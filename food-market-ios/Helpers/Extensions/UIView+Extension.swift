@@ -8,6 +8,17 @@
 import UIKit
 
 extension UIView {
+    func addDashedBorder(color: UIColor = ColorConstant.primaryGray, dashPattern: [NSNumber] = [16, 10]) {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.lineWidth = 1
+        shapeLayer.lineDashPattern = dashPattern
+        shapeLayer.fillColor = nil
+        shapeLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
+        shapeLayer.frame = self.bounds
+        self.layer.addSublayer(shapeLayer)
+    }
+    
     func loadViewFromNib(nibName: String) -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
@@ -23,5 +34,10 @@ extension UIView {
             }
         }
         return nil
+    }
+    
+    func roundedFull() {
+        self.layer.cornerRadius = self.bounds.width / 2
+        self.clipsToBounds = true
     }
 }

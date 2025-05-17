@@ -14,6 +14,8 @@
 		151ED1F62DD375EA00CA3FD8 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED1F52DD375EA00CA3FD8 /* SignUpRouter.swift */; };
 		151ED1F82DD3761F00CA3FD8 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED1F72DD3761F00CA3FD8 /* SignUpPresenter.swift */; };
 		151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED1FB2DD3788300CA3FD8 /* MainButton.swift */; };
+		152329A92DD8B05B00F67B08 /* PhotoProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152329A82DD8B05B00F67B08 /* PhotoProfileView.swift */; };
+		152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152329AA2DD8B06D00F67B08 /* PhotoProfileView.xib */; };
 		154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1312CA81FBD00078ED4 /* SignInViewController.swift */; };
 		154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1322CA81FBD00078ED4 /* SignInViewController.xib */; };
 		154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1352CA8200300078ED4 /* SignInProtocol.swift */; };
@@ -45,6 +47,8 @@
 		151ED1F52DD375EA00CA3FD8 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		151ED1F72DD3761F00CA3FD8 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		151ED1FB2DD3788300CA3FD8 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		152329A82DD8B05B00F67B08 /* PhotoProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProfileView.swift; sourceTree = "<group>"; };
+		152329AA2DD8B06D00F67B08 /* PhotoProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoProfileView.xib; sourceTree = "<group>"; };
 		154EB1312CA81FBD00078ED4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		154EB1322CA81FBD00078ED4 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		154EB1352CA8200300078ED4 /* SignInProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
@@ -151,6 +155,15 @@
 			path = MainButton;
 			sourceTree = "<group>";
 		};
+		152329A72DD8B04300F67B08 /* PhotoProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				152329A82DD8B05B00F67B08 /* PhotoProfileView.swift */,
+				152329AA2DD8B06D00F67B08 /* PhotoProfileView.xib */,
+			);
+			path = PhotoProfileView;
+			sourceTree = "<group>";
+		};
 		154EB12C2CA81E0B00078ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				154EB1422CA8381E00078ED4 /* HeaderView */,
+				152329A72DD8B04300F67B08 /* PhotoProfileView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -449,6 +463,7 @@
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
+				152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +486,7 @@
 				154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */,
 				154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */,
 				154EB14B2CA8541C00078ED4 /* BaseViewController.swift in Sources */,
+				152329A92DD8B05B00F67B08 /* PhotoProfileView.swift in Sources */,
 				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
 				151ED1F12DD3754600CA3FD8 /* SignUpViewController.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,

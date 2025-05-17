@@ -33,12 +33,6 @@ class MainButton: UIButton {
         }
     }
     
-    override var intrinsicContentSize: CGSize {
-        let defaultHeight: CGFloat = 45
-        let width = super.intrinsicContentSize.width
-        return CGSize(width: width, height: defaultHeight)
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupButton()
