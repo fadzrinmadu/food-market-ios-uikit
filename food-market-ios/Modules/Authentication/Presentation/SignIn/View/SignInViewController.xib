@@ -29,7 +29,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PGl-iA-ozN">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="414"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="466"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9W-Ah-aC9" userLabel="Navigation View">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
@@ -49,7 +49,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-nl-cSv" userLabel="Form View">
-                                            <rect key="frame" x="0.0" y="132" width="393" height="282"/>
+                                            <rect key="frame" x="0.0" y="132" width="393" height="334"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="VID-o3-DVB">
                                                     <rect key="frame" x="24" y="26" width="345" height="282"/>
@@ -136,7 +136,7 @@
                                             <constraints>
                                                 <constraint firstItem="VID-o3-DVB" firstAttribute="top" secondItem="3RW-nl-cSv" secondAttribute="top" constant="26" id="FHT-va-IT1"/>
                                                 <constraint firstItem="VID-o3-DVB" firstAttribute="leading" secondItem="3RW-nl-cSv" secondAttribute="leading" constant="24" id="VKD-XF-FwD"/>
-                                                <constraint firstAttribute="height" constant="282" id="rDH-tY-Bco"/>
+                                                <constraint firstAttribute="bottom" secondItem="VID-o3-DVB" secondAttribute="bottom" constant="26" id="Zdi-ub-c9c"/>
                                                 <constraint firstAttribute="trailing" secondItem="VID-o3-DVB" secondAttribute="trailing" constant="24" id="zN7-O4-lKg"/>
                                             </constraints>
                                         </view>
@@ -175,10 +175,10 @@
     </objects>
     <designables>
         <designable name="Q5v-bn-Sfn">
-            <size key="intrinsicContentSize" width="75.666666666666671" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
         <designable name="pr3-1t-rHq">
-            <size key="intrinsicContentSize" width="180.66666666666666" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

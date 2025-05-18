@@ -38,6 +38,11 @@ class MainButton: UIButton {
         setupButton()
     }
     
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setupButton()
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupButton()

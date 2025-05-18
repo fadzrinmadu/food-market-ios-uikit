@@ -26,15 +26,7 @@ final class InputTextField: UIView {
         super.init(coder: coder)
         commonInit()
     }
-    
-    private func commonInit() {
-        guard let view = self.loadViewFromNib(nibName: "InputTextField") else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-        inputLabel.textColor = ColorConstant.primaryBlack
-        inputLabel.font = FontConstant.poppinsRegular
-    }
-    
+
     func setupData(data: InputTextFieldData) {
         inputLabel.text = data.label
         inputTextField.isSecureTextEntry = data.isSecure ?? false
@@ -42,5 +34,13 @@ final class InputTextField: UIView {
             string: data.placeholder,
             attributes: [.foregroundColor: ColorConstant.primaryGray]
         )
+    }
+
+    private func commonInit() {
+        guard let view = self.loadViewFromNib(nibName: "InputTextField") else { return }
+        view.frame = self.bounds
+        self.addSubview(view)
+        inputLabel.textColor = ColorConstant.primaryBlack
+        inputLabel.font = FontConstant.poppinsRegular
     }
 }

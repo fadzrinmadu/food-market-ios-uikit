@@ -36,6 +36,14 @@
 		157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */; };
 		157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F82C9554CB005BF7F8 /* Assets.xcassets */; };
 		157D31FC2C9554CB005BF7F8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 157D31FB2C9554CB005BF7F8 /* Base */; };
+		1585D7EC2DD98EA5000ECF1A /* SignUpAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585D7EB2DD98EA5000ECF1A /* SignUpAddressViewController.xib */; };
+		1585D7ED2DD98EA5000ECF1A /* SignUpAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7EA2DD98EA5000ECF1A /* SignUpAddressViewController.swift */; };
+		1585D7EF2DD98EB6000ECF1A /* SignUpAddressInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7EE2DD98EB6000ECF1A /* SignUpAddressInteractor.swift */; };
+		1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F02DD98ECB000ECF1A /* SignUpAddressRouter.swift */; };
+		1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F22DD98EE3000ECF1A /* SignUpAddressPresenter.swift */; };
+		1585D7F52DD98EFB000ECF1A /* SignUpAddressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */; };
+		1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */; };
+		1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585D7F92DD9AC55000ECF1A /* DropdownView.xib */; };
 		15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +80,14 @@
 		157D31F82C9554CB005BF7F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		157D31FB2C9554CB005BF7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		157D31FD2C9554CB005BF7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1585D7EA2DD98EA5000ECF1A /* SignUpAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressViewController.swift; sourceTree = "<group>"; };
+		1585D7EB2DD98EA5000ECF1A /* SignUpAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpAddressViewController.xib; sourceTree = "<group>"; };
+		1585D7EE2DD98EB6000ECF1A /* SignUpAddressInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressInteractor.swift; sourceTree = "<group>"; };
+		1585D7F02DD98ECB000ECF1A /* SignUpAddressRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressRouter.swift; sourceTree = "<group>"; };
+		1585D7F22DD98EE3000ECF1A /* SignUpAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressPresenter.swift; sourceTree = "<group>"; };
+		1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressProtocol.swift; sourceTree = "<group>"; };
+		1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
+		1585D7F92DD9AC55000ECF1A /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +224,7 @@
 		154EB13D2CA8379100078ED4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1585D7F62DD9AC35000ECF1A /* DropdownView */,
 				154EB1422CA8381E00078ED4 /* HeaderView */,
 				152329A72DD8B04300F67B08 /* PhotoProfileView */,
 			);
@@ -296,6 +313,68 @@
 			path = "food-market-ios";
 			sourceTree = "<group>";
 		};
+		1585D7E42DD98E42000ECF1A /* SignUpAddress */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7E92DD98E7B000ECF1A /* Presenter */,
+				1585D7E82DD98E75000ECF1A /* Protocol */,
+				1585D7E72DD98E70000ECF1A /* Router */,
+				1585D7E62DD98E6B000ECF1A /* Interactor */,
+				1585D7E52DD98E66000ECF1A /* View */,
+			);
+			path = SignUpAddress;
+			sourceTree = "<group>";
+		};
+		1585D7E52DD98E66000ECF1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7EA2DD98EA5000ECF1A /* SignUpAddressViewController.swift */,
+				1585D7EB2DD98EA5000ECF1A /* SignUpAddressViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1585D7E62DD98E6B000ECF1A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7EE2DD98EB6000ECF1A /* SignUpAddressInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1585D7E72DD98E70000ECF1A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7F02DD98ECB000ECF1A /* SignUpAddressRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1585D7E82DD98E75000ECF1A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1585D7E92DD98E7B000ECF1A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7F22DD98EE3000ECF1A /* SignUpAddressPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1585D7F62DD9AC35000ECF1A /* DropdownView */ = {
+			isa = PBXGroup;
+			children = (
+				1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */,
+				1585D7F92DD9AC55000ECF1A /* DropdownView.xib */,
+			);
+			path = DropdownView;
+			sourceTree = "<group>";
+		};
 		15F294E02CA7D3F700FA1A0E /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +450,7 @@
 			children = (
 				15F295022CA7E26A00FA1A0E /* SignIn */,
 				151ED1E72DD371E800CA3FD8 /* SignUp */,
+				1585D7E42DD98E42000ECF1A /* SignUpAddress */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -459,7 +539,9 @@
 				154EB1462CA839FC00078ED4 /* Poppins-Light.ttf in Resources */,
 				154EB1512CA8705900078ED4 /* InputTextField.xib in Resources */,
 				154EB1442CA8382F00078ED4 /* HeaderView.xib in Resources */,
+				1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */,
 				15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */,
+				1585D7EC2DD98EA5000ECF1A /* SignUpAddressViewController.xib in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
@@ -475,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				151ED1F62DD375EA00CA3FD8 /* SignUpRouter.swift in Sources */,
+				1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */,
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
@@ -485,6 +568,8 @@
 				154EB1482CA84F2900078ED4 /* UIView+Extension.swift in Sources */,
 				154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */,
 				154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */,
+				1585D7F52DD98EFB000ECF1A /* SignUpAddressProtocol.swift in Sources */,
+				1585D7EF2DD98EB6000ECF1A /* SignUpAddressInteractor.swift in Sources */,
 				154EB14B2CA8541C00078ED4 /* BaseViewController.swift in Sources */,
 				152329A92DD8B05B00F67B08 /* PhotoProfileView.swift in Sources */,
 				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
@@ -493,8 +578,11 @@
 				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
 				154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */,
+				1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */,
+				1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */,
 				154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */,
 				151ED1F42DD3759500CA3FD8 /* SignUpInteractor.swift in Sources */,
+				1585D7ED2DD98EA5000ECF1A /* SignUpAddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

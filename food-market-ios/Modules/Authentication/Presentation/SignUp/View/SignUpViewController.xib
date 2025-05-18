@@ -31,7 +31,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="DTa-6q-2r9">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="414"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="629"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-T8-Wmn" userLabel="Navigation View">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
@@ -51,7 +51,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vF-w5-Vq7" userLabel="Form View">
-                                            <rect key="frame" x="0.0" y="132" width="393" height="282"/>
+                                            <rect key="frame" x="0.0" y="132" width="393" height="497"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-pG-Jvh">
                                                     <rect key="frame" x="24" y="26" width="345" height="445"/>
@@ -104,7 +104,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZBK-E1-AeK" userLabel="Button Stack View">
                                                             <rect key="frame" x="0.0" y="400" width="345" height="45"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-4b-lPv" userLabel="Sign In Button" customClass="MainButton" customModule="food_market_ios" customModuleProvider="target">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-4b-lPv" userLabel="Continue Button" customClass="MainButton" customModule="food_market_ios" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="345" height="45"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="45" id="T0p-Mo-XXc"/>
@@ -124,6 +124,9 @@
                                                                             <real key="value" value="8"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="continueButtonPressed:" destination="-1" eventType="touchUpInside" id="JFQ-g4-3KG"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -135,8 +138,8 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YQa-pG-Jvh" secondAttribute="bottom" constant="26" id="63g-hi-bDY"/>
                                                 <constraint firstItem="YQa-pG-Jvh" firstAttribute="leading" secondItem="0vF-w5-Vq7" secondAttribute="leading" constant="24" id="GHV-Hx-Oqm"/>
-                                                <constraint firstAttribute="height" constant="282" id="a3m-cm-vjq"/>
                                                 <constraint firstItem="YQa-pG-Jvh" firstAttribute="top" secondItem="0vF-w5-Vq7" secondAttribute="top" constant="26" id="aNV-3T-t4Z"/>
                                                 <constraint firstAttribute="trailing" secondItem="YQa-pG-Jvh" secondAttribute="trailing" constant="24" id="mj0-br-l2G"/>
                                             </constraints>
@@ -176,7 +179,7 @@
     </objects>
     <designables>
         <designable name="Kfp-4b-lPv">
-            <size key="intrinsicContentSize" width="92.666666666666671" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

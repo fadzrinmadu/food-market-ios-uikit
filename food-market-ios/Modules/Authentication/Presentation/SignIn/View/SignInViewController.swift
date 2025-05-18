@@ -48,7 +48,7 @@ class SignInViewController: BaseViewController {
     }
     
     @IBAction func SignUpButtonPressed(_ sender: MainButton) {
-        let vc = SignUpRouter.createModule()
+        let vc: SignUpViewController = SignUpRouter.createModule()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

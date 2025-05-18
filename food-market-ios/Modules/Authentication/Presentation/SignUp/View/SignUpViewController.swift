@@ -54,6 +54,11 @@ class SignUpViewController: BaseViewController {
             )
         )
     }
+
+    @IBAction func continueButtonPressed(_ sender: MainButton) {
+        let vc: SignUpAddressViewController = SignUpAddressRouter.createModule()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension SignUpViewController: UploadPhotoProfileDelegate {
