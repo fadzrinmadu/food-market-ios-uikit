@@ -1,8 +1,8 @@
-Progress [2 / 100%]
+Progress [3 / 100%]
 
 Dev :
-- Construct UI signup address screen
+- Create dropdown component
 - Create snackbar component
 
 Todo :
-- Area for click on button doesn't filled
+- Add error state for input field
