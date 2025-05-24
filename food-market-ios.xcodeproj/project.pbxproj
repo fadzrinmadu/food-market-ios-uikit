@@ -32,6 +32,7 @@
 		154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1552CA8789600078ED4 /* ColorConstant.swift */; };
 		154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1572CA8792900078ED4 /* FontConstant.swift */; };
 		154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1592CA87C6400078ED4 /* PaddedTextField.swift */; };
+		1568051B2DE223820095CEC2 /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568051A2DE223820095CEC2 /* SnackbarView.swift */; };
 		157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */; };
 		157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */; };
 		157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F82C9554CB005BF7F8 /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		1585D7F52DD98EFB000ECF1A /* SignUpAddressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */; };
 		1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */; };
 		1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585D7F92DD9AC55000ECF1A /* DropdownView.xib */; };
+		15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */; };
+		15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */; };
 		15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */; };
 		86AF398B94F9CF94C33515F5 /* Pods_food_market_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC593491A0B3FCFFDEF9411C /* Pods_food_market_ios.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,7 @@
 		154EB1552CA8789600078ED4 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		154EB1572CA8792900078ED4 /* FontConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstant.swift; sourceTree = "<group>"; };
 		154EB1592CA87C6400078ED4 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		1568051A2DE223820095CEC2 /* SnackbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
 		157D31EC2C9554CA005BF7F8 /* food-market-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-market-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressProtocol.swift; sourceTree = "<group>"; };
 		1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 		1585D7F92DD9AC55000ECF1A /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
+		15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackbarView.xib; sourceTree = "<group>"; };
+		15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		45444429DCACCA3020BF8957 /* Pods-food-market-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-food-market-ios.debug.xcconfig"; path = "Target Support Files/Pods-food-market-ios/Pods-food-market-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		65C0F0BD7B907CAEB941AA85 /* Pods-food-market-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-food-market-ios.release.xcconfig"; path = "Target Support Files/Pods-food-market-ios/Pods-food-market-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 				1585D7F62DD9AC35000ECF1A /* DropdownView */,
 				154EB1422CA8381E00078ED4 /* HeaderView */,
 				152329A72DD8B04300F67B08 /* PhotoProfileView */,
+				156805192DE223620095CEC2 /* SnackbarView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +293,15 @@
 				154EB1572CA8792900078ED4 /* FontConstant.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		156805192DE223620095CEC2 /* SnackbarView */ = {
+			isa = PBXGroup;
+			children = (
+				1568051A2DE223820095CEC2 /* SnackbarView.swift */,
+				15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */,
+			);
+			path = SnackbarView;
 			sourceTree = "<group>";
 		};
 		157D31E32C9554CA005BF7F8 = {
@@ -440,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				154EB1472CA84F2900078ED4 /* UIView+Extension.swift */,
+				15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -570,6 +587,7 @@
 				1585D7EC2DD98EA5000ECF1A /* SignUpAddressViewController.xib in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
+				15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
 				152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */,
 			);
@@ -628,6 +646,7 @@
 				1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */,
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
+				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
 				151ED1EE2DD3727800CA3FD8 /* SignUpProtocol.swift in Sources */,
@@ -649,6 +668,7 @@
 				1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */,
 				1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */,
 				154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */,
+				1568051B2DE223820095CEC2 /* SnackbarView.swift in Sources */,
 				151ED1F42DD3759500CA3FD8 /* SignUpInteractor.swift in Sources */,
 				1585D7ED2DD98EA5000ECF1A /* SignUpAddressViewController.swift in Sources */,
 			);
