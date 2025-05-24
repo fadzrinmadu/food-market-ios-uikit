@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropdownView" customModule="food_market_ios" customModuleProvider="target">
             <connections>
+                <outlet property="dropdownButton" destination="zJa-bN-5nV" id="Z83-xL-EZU"/>
                 <outlet property="dropdownView" destination="xDJ-rs-qcr" id="MLi-pZ-Cmy"/>
                 <outlet property="inputLabel" destination="fHY-ch-weG" id="n2U-0L-Jzx"/>
                 <outlet property="placeholderLabel" destination="izZ-bh-Ez9" id="NMa-h7-y9c"/>
@@ -40,6 +41,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="312" height="40"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
+                                            <connections>
+                                                <action selector="dropdownButtonPressed:" destination="-1" eventType="touchUpInside" id="FlO-2k-sf6"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izZ-bh-Ez9">
                                             <rect key="frame" x="10" y="0.0" width="292" height="40"/>
