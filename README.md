@@ -1,8 +1,8 @@
 Progress [3 / 100%]
 
 Dev :
-- Create dropdown component
-- Create snackbar component
+- Construct UI Success Sign Up Page
 
 Todo :
-- Add error state for input field
+- Dropdown button doens't work
+- Snackbar helper doesn't work
