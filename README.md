@@ -1,8 +1,8 @@
-Progress [3 / 100%]
+Progress [4 / 100%]
 
 Dev :
-- Construct UI Success Sign Up Page
+- Create Tab Navigator
 
 Todo :
-- Dropdown button doens't work
+- Force close when click Dropdown button component
 - Snackbar helper doesn't work
