@@ -73,6 +73,9 @@
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="findButtonPressed:" destination="-1" eventType="touchUpInside" id="pPO-dP-3GS"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

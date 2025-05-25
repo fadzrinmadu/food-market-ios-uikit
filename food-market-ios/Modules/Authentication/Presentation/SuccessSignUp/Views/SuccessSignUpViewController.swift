@@ -25,6 +25,11 @@ class SuccessSignUpViewController: BaseViewController {
         descriptionLabel.font = FontConstant.poppinsLightSmall
         descriptionLabel.textColor = ColorConstant.primaryGray
     }
+    
+    @IBAction func findButtonPressed(_ sender: MainButton) {
+        let vc: FoodHomeViewController = FoodHomeRouter.createModule()
+        navigationController?.setViewControllers([vc], animated: true)
+    }
 }
 
 extension SuccessSignUpViewController: SuccessSignUpPresenterToViewProtocol {

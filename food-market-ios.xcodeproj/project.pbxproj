@@ -52,6 +52,12 @@
 		15EE55CF2DE2E05600EAF547 /* SuccessSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EE55CD2DE2E05600EAF547 /* SuccessSignUpViewController.xib */; };
 		15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55D02DE2E09B00EAF547 /* SuccessSignUpProtocol.swift */; };
 		15EE55D22DE2FBA500EAF547 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1522CA8711B00078ED4 /* Poppins-Regular.ttf */; };
+		15EE55DC2DE3039B00EAF547 /* FoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55DA2DE3039B00EAF547 /* FoodHomeViewController.swift */; };
+		15EE55DD2DE3039B00EAF547 /* FoodHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EE55DB2DE3039B00EAF547 /* FoodHomeViewController.xib */; };
+		15EE55DF2DE303BD00EAF547 /* FoodHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55DE2DE303BD00EAF547 /* FoodHomeInteractor.swift */; };
+		15EE55E12DE303DF00EAF547 /* FoodHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55E02DE303DF00EAF547 /* FoodHomeRouter.swift */; };
+		15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55E22DE303E900EAF547 /* FoodHomeProtocol.swift */; };
+		15EE55E52DE3043700EAF547 /* FoodHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55E42DE3043700EAF547 /* FoodHomePresenter.swift */; };
 		15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */; };
 		15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */; };
 		15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */; };
@@ -106,6 +112,12 @@
 		15EE55CC2DE2E05600EAF547 /* SuccessSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpViewController.swift; sourceTree = "<group>"; };
 		15EE55CD2DE2E05600EAF547 /* SuccessSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessSignUpViewController.xib; sourceTree = "<group>"; };
 		15EE55D02DE2E09B00EAF547 /* SuccessSignUpProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpProtocol.swift; sourceTree = "<group>"; };
+		15EE55DA2DE3039B00EAF547 /* FoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHomeViewController.swift; sourceTree = "<group>"; };
+		15EE55DB2DE3039B00EAF547 /* FoodHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodHomeViewController.xib; sourceTree = "<group>"; };
+		15EE55DE2DE303BD00EAF547 /* FoodHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHomeInteractor.swift; sourceTree = "<group>"; };
+		15EE55E02DE303DF00EAF547 /* FoodHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHomeRouter.swift; sourceTree = "<group>"; };
+		15EE55E22DE303E900EAF547 /* FoodHomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHomeProtocol.swift; sourceTree = "<group>"; };
+		15EE55E42DE3043700EAF547 /* FoodHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHomePresenter.swift; sourceTree = "<group>"; };
 		15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackbarView.xib; sourceTree = "<group>"; };
 		15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -464,6 +476,75 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		15EE55D32DE300DD00EAF547 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55E62DE3068700EAF547 /* Presentation */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		15EE55D42DE3013700EAF547 /* FoodHome */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55D92DE3035C00EAF547 /* Presenter */,
+				15EE55D82DE3035700EAF547 /* Protocol */,
+				15EE55D62DE3033E00EAF547 /* Router */,
+				15EE55D72DE3034700EAF547 /* Interactor */,
+				15EE55D52DE3020000EAF547 /* View */,
+			);
+			path = FoodHome;
+			sourceTree = "<group>";
+		};
+		15EE55D52DE3020000EAF547 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55DA2DE3039B00EAF547 /* FoodHomeViewController.swift */,
+				15EE55DB2DE3039B00EAF547 /* FoodHomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15EE55D62DE3033E00EAF547 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55E02DE303DF00EAF547 /* FoodHomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		15EE55D72DE3034700EAF547 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55DE2DE303BD00EAF547 /* FoodHomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		15EE55D82DE3035700EAF547 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55E22DE303E900EAF547 /* FoodHomeProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		15EE55D92DE3035C00EAF547 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55E42DE3043700EAF547 /* FoodHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		15EE55E62DE3068700EAF547 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55D42DE3013700EAF547 /* FoodHome */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		15F294E02CA7D3F700FA1A0E /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				15F294FF2CA7E22B00FA1A0E /* Authentication */,
+				15EE55D32DE300DD00EAF547 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -654,6 +736,7 @@
 				1585D7EC2DD98EA5000ECF1A /* SignUpAddressViewController.xib in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
+				15EE55DD2DE3039B00EAF547 /* FoodHomeViewController.xib in Resources */,
 				15EE55D22DE2FBA500EAF547 /* Poppins-Regular.ttf in Resources */,
 				15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
@@ -717,11 +800,14 @@
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
+				15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */,
+				15EE55E52DE3043700EAF547 /* FoodHomePresenter.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
 				15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */,
 				15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */,
 				151ED1EE2DD3727800CA3FD8 /* SignUpProtocol.swift in Sources */,
+				15EE55DF2DE303BD00EAF547 /* FoodHomeInteractor.swift in Sources */,
 				154EB14F2CA8704D00078ED4 /* InputTextField.swift in Sources */,
 				151ED1F82DD3761F00CA3FD8 /* SignUpPresenter.swift in Sources */,
 				154EB1482CA84F2900078ED4 /* UIView+Extension.swift in Sources */,
@@ -740,7 +826,9 @@
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
 				154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */,
 				1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */,
+				15EE55DC2DE3039B00EAF547 /* FoodHomeViewController.swift in Sources */,
 				1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */,
+				15EE55E12DE303DF00EAF547 /* FoodHomeRouter.swift in Sources */,
 				154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */,
 				1568051B2DE223820095CEC2 /* SnackbarView.swift in Sources */,
 				151ED1F42DD3759500CA3FD8 /* SignUpInteractor.swift in Sources */,

@@ -60,7 +60,7 @@ class SignUpAddressViewController: BaseViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: MainButton) {
-        let vc = SuccessSignUpRouter.createModule()
+        let vc: SuccessSignUpViewController = SuccessSignUpRouter.createModule()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
