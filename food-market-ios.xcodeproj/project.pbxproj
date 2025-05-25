@@ -45,6 +45,13 @@
 		1585D7F52DD98EFB000ECF1A /* SignUpAddressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */; };
 		1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */; };
 		1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585D7F92DD9AC55000ECF1A /* DropdownView.xib */; };
+		15EE55C72DE2439100EAF547 /* SuccessSignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */; };
+		15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */; };
+		15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */; };
+		15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55CC2DE2E05600EAF547 /* SuccessSignUpViewController.swift */; };
+		15EE55CF2DE2E05600EAF547 /* SuccessSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EE55CD2DE2E05600EAF547 /* SuccessSignUpViewController.xib */; };
+		15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55D02DE2E09B00EAF547 /* SuccessSignUpProtocol.swift */; };
+		15EE55D22DE2FBA500EAF547 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1522CA8711B00078ED4 /* Poppins-Regular.ttf */; };
 		15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */; };
 		15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */; };
 		15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */; };
@@ -93,6 +100,12 @@
 		1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressProtocol.swift; sourceTree = "<group>"; };
 		1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 		1585D7F92DD9AC55000ECF1A /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
+		15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpPresenter.swift; sourceTree = "<group>"; };
+		15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpRouter.swift; sourceTree = "<group>"; };
+		15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpInteractor.swift; sourceTree = "<group>"; };
+		15EE55CC2DE2E05600EAF547 /* SuccessSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpViewController.swift; sourceTree = "<group>"; };
+		15EE55CD2DE2E05600EAF547 /* SuccessSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessSignUpViewController.xib; sourceTree = "<group>"; };
+		15EE55D02DE2E09B00EAF547 /* SuccessSignUpProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpProtocol.swift; sourceTree = "<group>"; };
 		15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackbarView.xib; sourceTree = "<group>"; };
 		15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		15F2950A2CA7ED9C00FA1A0E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -398,6 +411,59 @@
 			path = DropdownView;
 			sourceTree = "<group>";
 		};
+		15EE55C02DE2432700EAF547 /* SuccessSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55C52DE2437300EAF547 /* Presenter */,
+				15EE55C42DE2436C00EAF547 /* Protocol */,
+				15EE55C32DE2436400EAF547 /* Router */,
+				15EE55C22DE2435800EAF547 /* Interactor */,
+				15EE55C12DE2434F00EAF547 /* Views */,
+			);
+			path = SuccessSignUp;
+			sourceTree = "<group>";
+		};
+		15EE55C12DE2434F00EAF547 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55CC2DE2E05600EAF547 /* SuccessSignUpViewController.swift */,
+				15EE55CD2DE2E05600EAF547 /* SuccessSignUpViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15EE55C22DE2435800EAF547 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		15EE55C32DE2436400EAF547 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		15EE55C42DE2436C00EAF547 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55D02DE2E09B00EAF547 /* SuccessSignUpProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		15EE55C52DE2437300EAF547 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		15F294E02CA7D3F700FA1A0E /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +541,7 @@
 				15F295022CA7E26A00FA1A0E /* SignIn */,
 				151ED1E72DD371E800CA3FD8 /* SignUp */,
 				1585D7E42DD98E42000ECF1A /* SignUpAddress */,
+				15EE55C02DE2432700EAF547 /* SuccessSignUp */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -587,9 +654,11 @@
 				1585D7EC2DD98EA5000ECF1A /* SignUpAddressViewController.xib in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
+				15EE55D22DE2FBA500EAF547 /* Poppins-Regular.ttf in Resources */,
 				15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
 				152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */,
+				15EE55CF2DE2E05600EAF547 /* SuccessSignUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,11 +713,14 @@
 			files = (
 				151ED1F62DD375EA00CA3FD8 /* SignUpRouter.swift in Sources */,
 				1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */,
+				15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */,
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
+				15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */,
+				15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */,
 				151ED1EE2DD3727800CA3FD8 /* SignUpProtocol.swift in Sources */,
 				154EB14F2CA8704D00078ED4 /* InputTextField.swift in Sources */,
 				151ED1F82DD3761F00CA3FD8 /* SignUpPresenter.swift in Sources */,
@@ -656,11 +728,13 @@
 				154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */,
 				154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */,
 				1585D7F52DD98EFB000ECF1A /* SignUpAddressProtocol.swift in Sources */,
+				15EE55C72DE2439100EAF547 /* SuccessSignUpPresenter.swift in Sources */,
 				1585D7EF2DD98EB6000ECF1A /* SignUpAddressInteractor.swift in Sources */,
 				154EB14B2CA8541C00078ED4 /* BaseViewController.swift in Sources */,
 				152329A92DD8B05B00F67B08 /* PhotoProfileView.swift in Sources */,
 				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
 				151ED1F12DD3754600CA3FD8 /* SignUpViewController.swift in Sources */,
+				15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
 				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,

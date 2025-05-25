@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpAddressViewController: UIViewController {
+class SignUpAddressViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var phoneNumberInputTextField: InputTextField!
     @IBOutlet weak var addressInputTextField: InputTextField!
@@ -57,6 +57,11 @@ class SignUpAddressViewController: UIViewController {
                 placeholder: "Select your city"
             )
         )
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: MainButton) {
+        let vc = SuccessSignUpRouter.createModule()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

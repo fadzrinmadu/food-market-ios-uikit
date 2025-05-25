@@ -31,7 +31,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-1l-v6U">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="414"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="581"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kof-UD-QNn" userLabel="Navigation View">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
@@ -51,7 +51,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gI0-qv-jqe" userLabel="Form View">
-                                            <rect key="frame" x="0.0" y="132" width="393" height="282"/>
+                                            <rect key="frame" x="0.0" y="132" width="393" height="449"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-5p-Dx0">
                                                     <rect key="frame" x="24" y="26" width="345" height="397"/>
@@ -112,6 +112,9 @@
                                                                             <real key="value" value="8"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="signUpButtonPressed:" destination="-1" eventType="touchUpInside" id="ov9-m0-Bnt"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -125,8 +128,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="RPK-5p-Dx0" secondAttribute="trailing" constant="24" id="CdN-71-DDa"/>
                                                 <constraint firstItem="RPK-5p-Dx0" firstAttribute="top" secondItem="gI0-qv-jqe" secondAttribute="top" constant="26" id="K8m-Kp-KWF"/>
+                                                <constraint firstAttribute="bottom" secondItem="RPK-5p-Dx0" secondAttribute="bottom" constant="26" id="T06-se-58t"/>
                                                 <constraint firstItem="RPK-5p-Dx0" firstAttribute="leading" secondItem="gI0-qv-jqe" secondAttribute="leading" constant="24" id="v7q-Uj-lsR"/>
-                                                <constraint firstAttribute="height" constant="282" id="vYa-bR-t0Y"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -164,7 +167,7 @@
     </objects>
     <designables>
         <designable name="SAD-6p-gro">
-            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="122.66666666666667" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>
