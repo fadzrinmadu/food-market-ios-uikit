@@ -1,7 +1,7 @@
-Progress [4 / 100%]
+Progress [10 / 100%]
 
 Dev :
-- Create Tab Navigator
+- Create Custom Swipeable View
 
 Todo :
 - Force close when click Dropdown button component
