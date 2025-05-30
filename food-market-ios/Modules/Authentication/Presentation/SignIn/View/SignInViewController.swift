@@ -44,7 +44,10 @@ class SignInViewController: BaseViewController {
     }
 
     @IBAction func signInButtonPressed(_ sender: MainButton) {
-        // TODO: Sign In
+        guard let sceneDelegate: SceneDelegate = UIApplication.shared.connectedScenes
+            .first?.delegate as? SceneDelegate else { return }
+        let tabBarController: MainTabBarController = MainTabBarController()
+        sceneDelegate.window?.rootViewController = tabBarController
     }
     
     @IBAction func SignUpButtonPressed(_ sender: MainButton) {

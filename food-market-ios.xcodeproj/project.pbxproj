@@ -45,6 +45,8 @@
 		1585D7F52DD98EFB000ECF1A /* SignUpAddressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */; };
 		1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */; };
 		1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585D7F92DD9AC55000ECF1A /* DropdownView.xib */; };
+		15CA99E52DE9D6EC003E33E7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99E42DE9D6EC003E33E7 /* MainTabBarController.swift */; };
+		15CA99E72DE9DCAE003E33E7 /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99E62DE9DCAD003E33E7 /* ImageConstant.swift */; };
 		15EE55C72DE2439100EAF547 /* SuccessSignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */; };
 		15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */; };
 		15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */; };
@@ -106,6 +108,8 @@
 		1585D7F42DD98EFB000ECF1A /* SignUpAddressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAddressProtocol.swift; sourceTree = "<group>"; };
 		1585D7F72DD9AC4D000ECF1A /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 		1585D7F92DD9AC55000ECF1A /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
+		15CA99E42DE9D6EC003E33E7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		15CA99E62DE9DCAD003E33E7 /* ImageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
 		15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpPresenter.swift; sourceTree = "<group>"; };
 		15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpRouter.swift; sourceTree = "<group>"; };
 		15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpInteractor.swift; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 			children = (
 				154EB1552CA8789600078ED4 /* ColorConstant.swift */,
 				154EB1572CA8792900078ED4 /* FontConstant.swift */,
+				15CA99E62DE9DCAD003E33E7 /* ImageConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -421,6 +426,22 @@
 				1585D7F92DD9AC55000ECF1A /* DropdownView.xib */,
 			);
 			path = DropdownView;
+			sourceTree = "<group>";
+		};
+		15CA99E22DE9D6C4003E33E7 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				15CA99E32DE9D6D8003E33E7 /* MainTabBarController */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		15CA99E32DE9D6D8003E33E7 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				15CA99E42DE9D6EC003E33E7 /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
 			sourceTree = "<group>";
 		};
 		15EE55C02DE2432700EAF547 /* SuccessSignUp */ = {
@@ -559,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				151ED1F92DD3785600CA3FD8 /* Buttons */,
+				15CA99E22DE9D6C4003E33E7 /* TabBarControllers */,
 				154EB14C2CA8701A00078ED4 /* TextFields */,
 				154EB1492CA8540A00078ED4 /* ViewControllers */,
 				154EB13D2CA8379100078ED4 /* Views */,
@@ -796,8 +818,10 @@
 			files = (
 				151ED1F62DD375EA00CA3FD8 /* SignUpRouter.swift in Sources */,
 				1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */,
+				15CA99E52DE9D6EC003E33E7 /* MainTabBarController.swift in Sources */,
 				15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */,
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
+				15CA99E72DE9DCAE003E33E7 /* ImageConstant.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */,

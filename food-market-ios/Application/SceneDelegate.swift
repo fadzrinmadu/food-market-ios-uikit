@@ -10,7 +10,11 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
+    ) {
         setupWindow(with: scene)
         setupFirstLayout()
     }
@@ -30,8 +34,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupFirstLayout() {
-        let vc = SignInRouter.createModule()
-        let navigation = UINavigationController(rootViewController: vc)
+        let signInVC = SignInRouter.createModule()
+        let navigation = UINavigationController(rootViewController: signInVC)
         navigation.modalPresentationStyle = .fullScreen
         self.window?.rootViewController = navigation
     }

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ProfileFilled.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
