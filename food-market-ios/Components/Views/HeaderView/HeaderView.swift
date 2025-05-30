@@ -31,20 +31,7 @@ final class HeaderView: UIView {
         super.init(coder: coder)
         commonInit()
     }
-    
-    private func commonInit() {
-        guard let view = self.loadViewFromNib(nibName: "HeaderView") else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-        
-        backButtonView.isHidden = true
-        profileView.isHidden = true
-        
-        let backButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(backButtonPressed))
-        backButtonView.addGestureRecognizer(backButtonTapGesture)
-        backButtonView.isUserInteractionEnabled = true
-    }
-    
+
     func setupData(data: HeaderViewData) {
         titleLabel.text = data.title
         subtitleLabel.text = data.subtitle
@@ -57,6 +44,20 @@ final class HeaderView: UIView {
             profileView.isHidden = false
             profileImageView.image = data.profileImage
         }
+    }
+    
+    private func commonInit() {
+        guard let view = self.loadViewFromNib(nibName: "HeaderView") else { return }
+        view.frame = self.bounds
+        self.addSubview(view)
+        
+        backButtonView.isHidden = true
+        profileView.isHidden = true
+        profileImageView.layer.cornerRadius = 8
+        
+        let backButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(backButtonPressed))
+        backButtonView.addGestureRecognizer(backButtonTapGesture)
+        backButtonView.isUserInteractionEnabled = true
     }
     
     @objc 

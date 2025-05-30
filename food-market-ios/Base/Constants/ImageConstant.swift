@@ -14,4 +14,6 @@ enum ImageConstant {
     static let profileFilled: UIImage = UIImage(named: "ProfileFilled") ?? UIImage()
     static let order: UIImage = UIImage(named: "Order") ?? UIImage()
     static let orderFilled: UIImage = UIImage(named: "OrderFilled") ?? UIImage()
+    static let star: UIImage = UIImage(named: "Star") ?? UIImage()
+    static let starFilled: UIImage = UIImage(named: "StarFilled") ?? UIImage()
 }

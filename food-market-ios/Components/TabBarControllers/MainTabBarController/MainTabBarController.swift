@@ -14,8 +14,29 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupUI() {
+        setupTabBarStyles()
+        setupTabBarItems()
+    }
+    
+    private func setupTabBarStyles() {
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = ColorConstant.primaryWhite
+            tabBar.standardAppearance = appearance
+            tabBar.scrollEdgeAppearance = appearance
+        } else if #available(iOS 13.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = ColorConstant.primaryWhite
+            tabBar.standardAppearance = appearance
+        } else {
+            tabBar.barTintColor = ColorConstant.primaryWhite
+        }
+    }
+    
+    private func setupTabBarItems() {
         let foodHomeVC = FoodHomeRouter.createModule()
-        foodHomeVC.view.backgroundColor = ColorConstant.backgroundColor
         foodHomeVC.tabBarItem = UITabBarItem(
             title: "",
             image: ImageConstant.home.withRenderingMode(.alwaysOriginal),
@@ -23,7 +44,6 @@ class MainTabBarController: UITabBarController {
         )
         
         let orderVC = UIViewController()
-        orderVC.view.backgroundColor = ColorConstant.backgroundColor
         orderVC.tabBarItem = UITabBarItem(
             title: "",
             image: ImageConstant.order.withRenderingMode(.alwaysOriginal),
@@ -31,7 +51,6 @@ class MainTabBarController: UITabBarController {
         )
         
         let profileVC = UIViewController()
-        profileVC.view.backgroundColor = ColorConstant.backgroundColor
         profileVC.tabBarItem = UITabBarItem(
             title: "",
             image: ImageConstant.profile.withRenderingMode(.alwaysOriginal),

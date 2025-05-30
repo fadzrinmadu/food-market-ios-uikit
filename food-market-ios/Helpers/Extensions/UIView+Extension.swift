@@ -19,6 +19,22 @@ extension UIView {
         self.layer.addSublayer(shapeLayer)
     }
     
+    func addShadow(
+        color: UIColor = .black,
+        opacity: Float = 0.2,
+        offset: CGSize = CGSize(width: 0, height: 2),
+        radius: CGFloat = 4,
+        shouldRasterize: Bool = true
+    ) {
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowOffset = offset
+        self.layer.shadowRadius = radius
+        self.layer.masksToBounds = false
+        self.layer.shouldRasterize = shouldRasterize
+        self.layer.rasterizationScale = UIScreen.main.scale
+    }
+    
     func loadViewFromNib(nibName: String) -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)

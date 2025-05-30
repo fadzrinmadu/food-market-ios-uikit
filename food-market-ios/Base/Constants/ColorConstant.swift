@@ -14,5 +14,7 @@ enum ColorConstant {
     static let primaryGray = UIColor(named: "PrimaryGray") ?? .white
     static let primaryGreen = UIColor(named: "PrimaryGreen") ?? .white
     static let primaryRed = UIColor(named: "PrimaryRed") ?? .white
+    static let primaryWhite = UIColor(named: "PrimaryWhite") ?? .white
+    static let primaryWhiteLight = UIColor(named: "PrimaryWhiteLight") ?? .white
     static let primaryYellow = UIColor(named: "PrimaryYellow") ?? .white
 }

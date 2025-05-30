@@ -47,6 +47,13 @@
 		1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585D7F92DD9AC55000ECF1A /* DropdownView.xib */; };
 		15CA99E52DE9D6EC003E33E7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99E42DE9D6EC003E33E7 /* MainTabBarController.swift */; };
 		15CA99E72DE9DCAE003E33E7 /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99E62DE9DCAD003E33E7 /* ImageConstant.swift */; };
+		15CA99E92DE9EE5A003E33E7 /* DummyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99E82DE9EE5A003E33E7 /* DummyConstant.swift */; };
+		15CA99ED2DE9EF77003E33E7 /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99EC2DE9EF76003E33E7 /* FoodCard.swift */; };
+		15CA99EF2DE9EF90003E33E7 /* FoodCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CA99EE2DE9EF90003E33E7 /* FoodCard.xib */; };
+		15CA99F22DE9F9AE003E33E7 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99F12DE9F9AE003E33E7 /* RatingView.swift */; };
+		15CA99F62DE9FA32003E33E7 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CA99F52DE9FA32003E33E7 /* RatingView.xib */; };
+		15CA99F92DEA0009003E33E7 /* FoodCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99F82DEA0009003E33E7 /* FoodCardCell.swift */; };
+		15CA99FB2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99FA2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift */; };
 		15EE55C72DE2439100EAF547 /* SuccessSignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */; };
 		15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */; };
 		15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */; };
@@ -110,6 +117,13 @@
 		1585D7F92DD9AC55000ECF1A /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		15CA99E42DE9D6EC003E33E7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		15CA99E62DE9DCAD003E33E7 /* ImageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
+		15CA99E82DE9EE5A003E33E7 /* DummyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyConstant.swift; sourceTree = "<group>"; };
+		15CA99EC2DE9EF76003E33E7 /* FoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
+		15CA99EE2DE9EF90003E33E7 /* FoodCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCard.xib; sourceTree = "<group>"; };
+		15CA99F12DE9F9AE003E33E7 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		15CA99F52DE9FA32003E33E7 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
+		15CA99F82DEA0009003E33E7 /* FoodCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCell.swift; sourceTree = "<group>"; };
+		15CA99FA2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodHomeViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpPresenter.swift; sourceTree = "<group>"; };
 		15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpRouter.swift; sourceTree = "<group>"; };
 		15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpInteractor.swift; sourceTree = "<group>"; };
@@ -267,6 +281,7 @@
 				1585D7F62DD9AC35000ECF1A /* DropdownView */,
 				154EB1422CA8381E00078ED4 /* HeaderView */,
 				152329A72DD8B04300F67B08 /* PhotoProfileView */,
+				15CA99F02DE9F99D003E33E7 /* RatingView */,
 				156805192DE223620095CEC2 /* SnackbarView */,
 			);
 			path = Views;
@@ -319,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				154EB1552CA8789600078ED4 /* ColorConstant.swift */,
+				15CA99E82DE9EE5A003E33E7 /* DummyConstant.swift */,
 				154EB1572CA8792900078ED4 /* FontConstant.swift */,
 				15CA99E62DE9DCAD003E33E7 /* ImageConstant.swift */,
 			);
@@ -444,6 +460,41 @@
 			path = MainTabBarController;
 			sourceTree = "<group>";
 		};
+		15CA99EA2DE9EF5A003E33E7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				15CA99EB2DE9EF63003E33E7 /* FoodCard */,
+				15CA99F72DE9FFDC003E33E7 /* FoodCardCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		15CA99EB2DE9EF63003E33E7 /* FoodCard */ = {
+			isa = PBXGroup;
+			children = (
+				15CA99EC2DE9EF76003E33E7 /* FoodCard.swift */,
+				15CA99EE2DE9EF90003E33E7 /* FoodCard.xib */,
+			);
+			path = FoodCard;
+			sourceTree = "<group>";
+		};
+		15CA99F02DE9F99D003E33E7 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				15CA99F12DE9F9AE003E33E7 /* RatingView.swift */,
+				15CA99F52DE9FA32003E33E7 /* RatingView.xib */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
+		15CA99F72DE9FFDC003E33E7 /* FoodCardCell */ = {
+			isa = PBXGroup;
+			children = (
+				15CA99F82DEA0009003E33E7 /* FoodCardCell.swift */,
+			);
+			path = FoodCardCell;
+			sourceTree = "<group>";
+		};
 		15EE55C02DE2432700EAF547 /* SuccessSignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,8 +571,10 @@
 		15EE55D52DE3020000EAF547 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15CA99EA2DE9EF5A003E33E7 /* Components */,
 				15EE55DA2DE3039B00EAF547 /* FoodHomeViewController.swift */,
 				15EE55DB2DE3039B00EAF547 /* FoodHomeViewController.xib */,
+				15CA99FA2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -764,6 +817,8 @@
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
 				152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */,
 				15EE55CF2DE2E05600EAF547 /* SuccessSignUpViewController.xib in Resources */,
+				15CA99EF2DE9EF90003E33E7 /* FoodCard.xib in Resources */,
+				15CA99F62DE9FA32003E33E7 /* RatingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,12 +875,14 @@
 				1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */,
 				15CA99E52DE9D6EC003E33E7 /* MainTabBarController.swift in Sources */,
 				15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */,
+				15CA99E92DE9EE5A003E33E7 /* DummyConstant.swift in Sources */,
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				15CA99E72DE9DCAE003E33E7 /* ImageConstant.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */,
 				15EE55E52DE3043700EAF547 /* FoodHomePresenter.swift in Sources */,
+				15CA99F22DE9F9AE003E33E7 /* RatingView.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
 				15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */,
@@ -847,9 +904,12 @@
 				15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
 				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
+				15CA99ED2DE9EF77003E33E7 /* FoodCard.swift in Sources */,
+				15CA99FB2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift in Sources */,
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
 				154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */,
 				1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */,
+				15CA99F92DEA0009003E33E7 /* FoodCardCell.swift in Sources */,
 				15EE55DC2DE3039B00EAF547 /* FoodHomeViewController.swift in Sources */,
 				1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */,
 				15EE55E12DE303DF00EAF547 /* FoodHomeRouter.swift in Sources */,
