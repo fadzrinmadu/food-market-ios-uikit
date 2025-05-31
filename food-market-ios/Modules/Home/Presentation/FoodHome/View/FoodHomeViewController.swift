@@ -10,6 +10,7 @@ import UIKit
 class FoodHomeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var foodCollectionView: UICollectionView!
+    @IBOutlet weak var foodListTabView: SwipeableTabView!
     
     weak var presenter: FoodHomeViewToPresenterProtocol?
     
@@ -24,6 +25,12 @@ class FoodHomeViewController: BaseViewController {
     }
     
     private func setupUI() {
+        setupSections()
+        setupCollectionView()
+        setupSwipeableSegmentedView()
+    }
+    
+    private func setupSections() {
         headerView.setupData(
             data: HeaderViewData(
                 title: "FoodMarket",
@@ -32,8 +39,6 @@ class FoodHomeViewController: BaseViewController {
                 showProfileImage: true
             )
         )
-        
-        setupCollectionView()
     }
     
     private func setupCollectionView() {
@@ -48,6 +53,27 @@ class FoodHomeViewController: BaseViewController {
         foodCollectionView.showsHorizontalScrollIndicator = false
         foodCollectionView.register(FoodCardCell.self, forCellWithReuseIdentifier: FoodCardCell.identifier)
         foodCollectionView.dataSource = self
+    }
+    
+    private func setupSwipeableSegmentedView() {
+        let newTasteView = UIView()
+        newTasteView.backgroundColor = .systemRed
+
+        let popularView = UIView()
+        popularView.backgroundColor = .systemBlue
+
+        let recommendedView = UIView()
+        recommendedView.backgroundColor = .systemGreen
+
+        foodListTabView.delegate = self
+        foodListTabView.tabs = ["New Taste", "Popular", "Recommended"]
+        foodListTabView.views = [newTasteView, popularView, recommendedView]
+    }
+}
+
+extension FoodHomeViewController: SwipeableTabViewDelegate {
+    func swipeableTabView(_ tabView: SwipeableTabView, didSelectTabAt index: Int) {
+        print("Tab dipilih: \(index)")
     }
 }
 

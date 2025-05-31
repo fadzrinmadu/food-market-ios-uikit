@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodHomeViewController" customModule="food_market_ios" customModuleProvider="target">
             <connections>
                 <outlet property="foodCollectionView" destination="xZ4-1g-8cB" id="XQN-MR-osw"/>
+                <outlet property="foodListTabView" destination="riu-iB-2Tb" id="S18-R0-Qwv"/>
                 <outlet property="headerView" destination="opj-lH-51c" id="Di2-uo-A6i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -71,7 +72,7 @@
                                                 <constraint firstItem="xZ4-1g-8cB" firstAttribute="top" secondItem="puS-Lp-Nyw" secondAttribute="top" id="rsD-Ey-tNS"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riu-iB-2Tb" userLabel="Food List View">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riu-iB-2Tb" userLabel="Food List Tab View" customClass="SwipeableTabView" customModule="food_market_ios" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="366" width="393" height="294"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>

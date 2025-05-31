@@ -33,6 +33,7 @@
 		154EB1582CA8792900078ED4 /* FontConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1572CA8792900078ED4 /* FontConstant.swift */; };
 		154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1592CA87C6400078ED4 /* PaddedTextField.swift */; };
 		1568051B2DE223820095CEC2 /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568051A2DE223820095CEC2 /* SnackbarView.swift */; };
+		157084CC2DEB1687001689D0 /* SwipeableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157084CB2DEB1687001689D0 /* SwipeableTabView.swift */; };
 		157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */; };
 		157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */; };
 		157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F82C9554CB005BF7F8 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		154EB1572CA8792900078ED4 /* FontConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstant.swift; sourceTree = "<group>"; };
 		154EB1592CA87C6400078ED4 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		1568051A2DE223820095CEC2 /* SnackbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
+		157084CB2DEB1687001689D0 /* SwipeableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableTabView.swift; sourceTree = "<group>"; };
 		157D31EC2C9554CA005BF7F8 /* food-market-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-market-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				152329A72DD8B04300F67B08 /* PhotoProfileView */,
 				15CA99F02DE9F99D003E33E7 /* RatingView */,
 				156805192DE223620095CEC2 /* SnackbarView */,
+				157084CA2DEB1672001689D0 /* SwipeableTabView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,6 +351,14 @@
 				15EEBC9E2DE225A100DBE24E /* SnackbarView.xib */,
 			);
 			path = SnackbarView;
+			sourceTree = "<group>";
+		};
+		157084CA2DEB1672001689D0 /* SwipeableTabView */ = {
+			isa = PBXGroup;
+			children = (
+				157084CB2DEB1687001689D0 /* SwipeableTabView.swift */,
+			);
+			path = SwipeableTabView;
 			sourceTree = "<group>";
 		};
 		157D31E32C9554CA005BF7F8 = {
@@ -881,6 +892,7 @@
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */,
+				157084CC2DEB1687001689D0 /* SwipeableTabView.swift in Sources */,
 				15EE55E52DE3043700EAF547 /* FoodHomePresenter.swift in Sources */,
 				15CA99F22DE9F9AE003E33E7 /* RatingView.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
