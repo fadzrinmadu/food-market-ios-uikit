@@ -9,7 +9,7 @@ import Foundation
 
 class FoodHomeRouter: FoodHomePresenterToRouterProtocol {
     static func createModule() -> FoodHomeViewController {
-        let view: FoodHomeViewController = FoodHomeViewController()
+        let view = FoodHomeViewController(nibName: "FoodHomeViewController", bundle: nil)
         let presenter: FoodHomeViewToPresenterProtocol & FoodHomeInteractorToPresenterProtocol = FoodHomePresenter()
         let interactor: FoodHomePreseterToInteractorProtocol = FoodHomeInteractor()
         let router: FoodHomeRouter = FoodHomeRouter()

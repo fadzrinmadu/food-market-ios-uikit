@@ -23,15 +23,22 @@ class MainTabBarController: UITabBarController {
             let appearance = UITabBarAppearance()
             appearance.configureWithOpaqueBackground()
             appearance.backgroundColor = ColorConstant.primaryWhite
+            appearance.shadowImage = nil
+            appearance.shadowColor = nil
             tabBar.standardAppearance = appearance
             tabBar.scrollEdgeAppearance = appearance
         } else if #available(iOS 13.0, *) {
             let appearance = UITabBarAppearance()
             appearance.configureWithOpaqueBackground()
             appearance.backgroundColor = ColorConstant.primaryWhite
+            appearance.shadowImage = nil
+            appearance.shadowColor = nil
             tabBar.standardAppearance = appearance
         } else {
             tabBar.barTintColor = ColorConstant.primaryWhite
+            tabBar.isTranslucent = false
+            tabBar.shadowImage = UIImage()
+            tabBar.backgroundImage = UIImage()
         }
     }
     

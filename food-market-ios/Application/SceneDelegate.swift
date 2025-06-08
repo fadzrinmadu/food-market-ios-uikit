@@ -34,9 +34,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupFirstLayout() {
-        let signInVC = SignInRouter.createModule()
-        let navigation = UINavigationController(rootViewController: signInVC)
-        navigation.modalPresentationStyle = .fullScreen
-        self.window?.rootViewController = navigation
+        let isLoggedIn = true
+        
+        if isLoggedIn {
+            let tabBarController = MainTabBarController()
+            self.window?.rootViewController = tabBarController
+        } else {
+            let signInVC = SignInRouter.createModule()
+            let navigation = UINavigationController(rootViewController: signInVC)
+            navigation.modalPresentationStyle = .fullScreen
+            self.window?.rootViewController = navigation
+        }
     }
 }

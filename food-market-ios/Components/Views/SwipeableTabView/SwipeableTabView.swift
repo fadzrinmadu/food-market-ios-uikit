@@ -101,7 +101,7 @@ final class SwipeableTabView: UIView {
         addSubview(contentScrollView)
 
         NSLayoutConstraint.activate([
-            contentScrollView.topAnchor.constraint(equalTo: tabScrollView.bottomAnchor, constant: 16),
+            contentScrollView.topAnchor.constraint(equalTo: tabScrollView.bottomAnchor),
             contentScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentScrollView.bottomAnchor.constraint(equalTo: bottomAnchor)

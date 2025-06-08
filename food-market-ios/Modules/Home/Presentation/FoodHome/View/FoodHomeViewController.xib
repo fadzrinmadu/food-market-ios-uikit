@@ -83,6 +83,7 @@
                                     <color key="backgroundColor" name="BackgroundColor"/>
                                 </stackView>
                             </subviews>
+                            <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="CQo-fO-d0a" firstAttribute="top" secondItem="xI9-HY-CEx" secondAttribute="top" id="COb-ty-Cnp"/>
                                 <constraint firstAttribute="bottom" secondItem="CQo-fO-d0a" secondAttribute="bottom" id="DAA-WH-h23"/>
