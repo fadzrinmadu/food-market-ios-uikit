@@ -10,7 +10,7 @@ import UIKit
 class FoodCardCell: UICollectionViewCell {
     static let identifier: String = "FoodCardCell"
     
-    private let foodCard = FoodCard()
+    private let foodCard: FoodCard = FoodCard()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -16,6 +16,7 @@ final class SwipeableTabView: UIView {
     private let tabScrollView = UIScrollView()
     private let tabContainerView = UIView()
     private let indicatorView = UIView()
+    private let tabBottomBorder = UIView()
     private let contentScrollView = UIScrollView()
     private let contentView = UIStackView()
 
@@ -62,6 +63,18 @@ final class SwipeableTabView: UIView {
             tabScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tabScrollView.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        // Bottom Border for Tab
+        tabBottomBorder.backgroundColor = ColorConstant.primaryWhiteLight
+        tabBottomBorder.translatesAutoresizingMaskIntoConstraints = false
+        tabScrollView.addSubview(tabBottomBorder)
+
+        NSLayoutConstraint.activate([
+            tabBottomBorder.topAnchor.constraint(equalTo: tabScrollView.bottomAnchor, constant: -1.5),
+            tabBottomBorder.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tabBottomBorder.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tabBottomBorder.heightAnchor.constraint(equalToConstant: 1)
+        ])
 
         // Tab Container View
         tabContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -88,7 +101,7 @@ final class SwipeableTabView: UIView {
         addSubview(contentScrollView)
 
         NSLayoutConstraint.activate([
-            contentScrollView.topAnchor.constraint(equalTo: tabScrollView.bottomAnchor),
+            contentScrollView.topAnchor.constraint(equalTo: tabScrollView.bottomAnchor, constant: 16),
             contentScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentScrollView.bottomAnchor.constraint(equalTo: bottomAnchor)

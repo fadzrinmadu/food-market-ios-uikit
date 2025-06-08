@@ -56,15 +56,9 @@ class FoodHomeViewController: BaseViewController {
     }
     
     private func setupSwipeableSegmentedView() {
-        let newTasteView = UIView()
-        newTasteView.backgroundColor = .systemRed
-
-        let popularView = UIView()
-        popularView.backgroundColor = .systemBlue
-
-        let recommendedView = UIView()
-        recommendedView.backgroundColor = .systemGreen
-
+        let newTasteView = FoodItemList()
+        let popularView = FoodItemList()
+        let recommendedView = FoodItemList()
         foodListTabView.delegate = self
         foodListTabView.tabs = ["New Taste", "Popular", "Recommended"]
         foodListTabView.views = [newTasteView, popularView, recommendedView]

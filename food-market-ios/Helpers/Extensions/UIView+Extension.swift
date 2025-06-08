@@ -8,6 +8,34 @@
 import UIKit
 
 extension UIView {
+    enum BorderPosition {
+        case top, bottom, left, right
+    }
+    
+    func addAllBorders(color: UIColor, thickness: CGFloat) {
+        addBorder(to: [.top, .bottom, .left, .right], color: color, thickness: thickness)
+    }
+    
+    func addBorder(to edges: [BorderPosition], color: UIColor, thickness: CGFloat) {
+        edges.forEach { position in
+            let border: CALayer = CALayer()
+            border.backgroundColor = color.cgColor
+
+            switch position {
+            case .top:
+                border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: thickness)
+            case .bottom:
+                border.frame = CGRect(x: 0, y: self.frame.height - thickness, width: self.frame.width, height: thickness)
+            case .left:
+                border.frame = CGRect(x: 0, y: 0, width: thickness, height: self.frame.height)
+            case .right:
+                border.frame = CGRect(x: self.frame.width - thickness, y: 0, width: thickness, height: self.frame.height)
+            }
+
+            self.layer.addSublayer(border)
+        }
+    }
+    
     func addDashedBorder(color: UIColor = ColorConstant.primaryGray, dashPattern: [NSNumber] = [16, 10]) {
         let shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = color.cgColor

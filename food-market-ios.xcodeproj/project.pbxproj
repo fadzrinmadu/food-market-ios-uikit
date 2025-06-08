@@ -16,6 +16,11 @@
 		151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED1FB2DD3788300CA3FD8 /* MainButton.swift */; };
 		152329A92DD8B05B00F67B08 /* PhotoProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152329A82DD8B05B00F67B08 /* PhotoProfileView.swift */; };
 		152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152329AA2DD8B06D00F67B08 /* PhotoProfileView.xib */; };
+		1523AD802DF5895100EF3841 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD7F2DF5895100EF3841 /* FoodItem.swift */; };
+		1523AD822DF589CE00EF3841 /* FoodItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523AD812DF589CE00EF3841 /* FoodItem.xib */; };
+		1523AD842DF58D2B00EF3841 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD832DF58D2B00EF3841 /* Int+Extension.swift */; };
+		1523AD872DF58E4500EF3841 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD862DF58E4500EF3841 /* FoodItemCell.swift */; };
+		1523AD8A2DF58F5200EF3841 /* FoodItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD892DF58F5200EF3841 /* FoodItemList.swift */; };
 		154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1312CA81FBD00078ED4 /* SignInViewController.swift */; };
 		154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1322CA81FBD00078ED4 /* SignInViewController.xib */; };
 		154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1352CA8200300078ED4 /* SignInProtocol.swift */; };
@@ -84,6 +89,11 @@
 		151ED1FB2DD3788300CA3FD8 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		152329A82DD8B05B00F67B08 /* PhotoProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProfileView.swift; sourceTree = "<group>"; };
 		152329AA2DD8B06D00F67B08 /* PhotoProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoProfileView.xib; sourceTree = "<group>"; };
+		1523AD7F2DF5895100EF3841 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		1523AD812DF589CE00EF3841 /* FoodItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItem.xib; sourceTree = "<group>"; };
+		1523AD832DF58D2B00EF3841 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		1523AD862DF58E4500EF3841 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
+		1523AD892DF58F5200EF3841 /* FoodItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemList.swift; sourceTree = "<group>"; };
 		154EB1312CA81FBD00078ED4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		154EB1322CA81FBD00078ED4 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		154EB1352CA8200300078ED4 /* SignInProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
@@ -234,6 +244,31 @@
 				152329AA2DD8B06D00F67B08 /* PhotoProfileView.xib */,
 			);
 			path = PhotoProfileView;
+			sourceTree = "<group>";
+		};
+		1523AD7E2DF5893600EF3841 /* FoodItem */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD7F2DF5895100EF3841 /* FoodItem.swift */,
+				1523AD812DF589CE00EF3841 /* FoodItem.xib */,
+			);
+			path = FoodItem;
+			sourceTree = "<group>";
+		};
+		1523AD852DF58DBE00EF3841 /* FoodItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD862DF58E4500EF3841 /* FoodItemCell.swift */,
+			);
+			path = FoodItemCell;
+			sourceTree = "<group>";
+		};
+		1523AD882DF58F2800EF3841 /* FoodItemList */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD892DF58F5200EF3841 /* FoodItemList.swift */,
+			);
+			path = FoodItemList;
 			sourceTree = "<group>";
 		};
 		154EB12C2CA81E0B00078ED4 /* View */ = {
@@ -474,6 +509,9 @@
 		15CA99EA2DE9EF5A003E33E7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1523AD7E2DF5893600EF3841 /* FoodItem */,
+				1523AD852DF58DBE00EF3841 /* FoodItemCell */,
+				1523AD882DF58F2800EF3841 /* FoodItemList */,
 				15CA99EB2DE9EF63003E33E7 /* FoodCard */,
 				15CA99F72DE9FFDC003E33E7 /* FoodCardCell */,
 			);
@@ -689,6 +727,7 @@
 		15F294EB2CA7D55B00FA1A0E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1523AD832DF58D2B00EF3841 /* Int+Extension.swift */,
 				154EB1472CA84F2900078ED4 /* UIView+Extension.swift */,
 				15EEBCA02DE228B000DBE24E /* UIViewController+Extension.swift */,
 			);
@@ -827,6 +866,7 @@
 				15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
 				152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */,
+				1523AD822DF589CE00EF3841 /* FoodItem.xib in Resources */,
 				15EE55CF2DE2E05600EAF547 /* SuccessSignUpViewController.xib in Resources */,
 				15CA99EF2DE9EF90003E33E7 /* FoodCard.xib in Resources */,
 				15CA99F62DE9FA32003E33E7 /* RatingView.xib in Resources */,
@@ -892,12 +932,14 @@
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */,
+				1523AD842DF58D2B00EF3841 /* Int+Extension.swift in Sources */,
 				157084CC2DEB1687001689D0 /* SwipeableTabView.swift in Sources */,
 				15EE55E52DE3043700EAF547 /* FoodHomePresenter.swift in Sources */,
 				15CA99F22DE9F9AE003E33E7 /* RatingView.swift in Sources */,
 				154EB1382CA821A400078ED4 /* SignInInteractor.swift in Sources */,
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
 				15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */,
+				1523AD802DF5895100EF3841 /* FoodItem.swift in Sources */,
 				15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */,
 				151ED1EE2DD3727800CA3FD8 /* SignUpProtocol.swift in Sources */,
 				15EE55DF2DE303BD00EAF547 /* FoodHomeInteractor.swift in Sources */,
@@ -912,6 +954,7 @@
 				154EB14B2CA8541C00078ED4 /* BaseViewController.swift in Sources */,
 				152329A92DD8B05B00F67B08 /* PhotoProfileView.swift in Sources */,
 				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
+				1523AD872DF58E4500EF3841 /* FoodItemCell.swift in Sources */,
 				151ED1F12DD3754600CA3FD8 /* SignUpViewController.swift in Sources */,
 				15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
@@ -924,6 +967,7 @@
 				15CA99F92DEA0009003E33E7 /* FoodCardCell.swift in Sources */,
 				15EE55DC2DE3039B00EAF547 /* FoodHomeViewController.swift in Sources */,
 				1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */,
+				1523AD8A2DF58F5200EF3841 /* FoodItemList.swift in Sources */,
 				15EE55E12DE303DF00EAF547 /* FoodHomeRouter.swift in Sources */,
 				154EB15A2CA87C6400078ED4 /* PaddedTextField.swift in Sources */,
 				1568051B2DE223820095CEC2 /* SnackbarView.swift in Sources */,
