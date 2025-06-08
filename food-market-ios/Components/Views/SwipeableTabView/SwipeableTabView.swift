@@ -11,189 +11,217 @@ protocol SwipeableTabViewDelegate: AnyObject {
     func swipeableTabView(_ tabView: SwipeableTabView, didSelectTabAt index: Int)
 }
 
-class SwipeableTabView: UIView {
+final class SwipeableTabView: UIView {
+    // MARK: - UI Elements
+    private let tabScrollView = UIScrollView()
+    private let tabContainerView = UIView()
+    private let indicatorView = UIView()
+    private let contentScrollView = UIScrollView()
+    private let contentView = UIStackView()
+
+    private var tabButtons: [UIButton] = []
+
     weak var delegate: SwipeableTabViewDelegate?
-    
-    var tabs: [String] = [] {
+
+    private var currentIndex: Int = 0
+
+    // MARK: - Public Properties
+    public var tabs: [String] = [] {
         didSet {
             setupTabs()
         }
     }
-    
-    var views: [UIView] = [] {
+
+    public var views: [UIView] = [] {
         didSet {
-            setupContentViews()
+            setupViews()
         }
     }
-    
-    private let tabStackView: UIStackView = UIStackView()
-    private let indicatorView: UIView = UIView()
-    private let scrollView: UIScrollView = UIScrollView()
-    private let tabWidthPercentage = 0.4
-    
-    private var indicatorLeadingConstraint: NSLayoutConstraint?
-    private var indicatorWidthConstraint: NSLayoutConstraint?
-    
-    private var currentIndex: Int = 0
-    
-    private var tabWidth: CGFloat {
-        guard tabs.count > 0 else { return 0 }
-        return frame.width / CGFloat(tabs.count)
-    }
-    
+
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        setupView()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupUI()
+        setupView()
     }
-    
-    private func setupUI() {
-        tabStackView.axis = .horizontal
-        tabStackView.distribution = .fillEqually
-        tabStackView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(tabStackView)
+
+    // MARK: - Setup View
+    private func setupView() {
+        // Tab Scroll View
+        tabScrollView.showsHorizontalScrollIndicator = false
+        tabScrollView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(tabScrollView)
+
         NSLayoutConstraint.activate([
-            tabStackView.topAnchor.constraint(equalTo: topAnchor),
-            tabStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tabStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tabStackView.heightAnchor.constraint(equalToConstant: 50),
+            tabScrollView.topAnchor.constraint(equalTo: topAnchor),
+            tabScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tabScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tabScrollView.heightAnchor.constraint(equalToConstant: 50)
         ])
-        
-        indicatorView.layer.cornerRadius = indicatorView.layer.cornerRadius / 2
+
+        // Tab Container View
+        tabContainerView.translatesAutoresizingMaskIntoConstraints = false
+        tabScrollView.addSubview(tabContainerView)
+
+        NSLayoutConstraint.activate([
+            tabContainerView.topAnchor.constraint(equalTo: tabScrollView.topAnchor),
+            tabContainerView.bottomAnchor.constraint(equalTo: tabScrollView.bottomAnchor),
+            tabContainerView.leadingAnchor.constraint(equalTo: tabScrollView.leadingAnchor),
+            tabContainerView.trailingAnchor.constraint(equalTo: tabScrollView.trailingAnchor),
+            tabContainerView.heightAnchor.constraint(equalTo: tabScrollView.heightAnchor)
+        ])
+
+        // Indicator View
         indicatorView.backgroundColor = ColorConstant.primaryBlack
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        indicatorLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: leadingAnchor)
-        indicatorWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: 0)
-        addSubview(indicatorView)
+        indicatorView.translatesAutoresizingMaskIntoConstraints = true
+        tabScrollView.addSubview(indicatorView)
+
+        // Content Scroll View
+        contentScrollView.isPagingEnabled = true
+        contentScrollView.showsHorizontalScrollIndicator = false
+        contentScrollView.delegate = self
+        contentScrollView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(contentScrollView)
+
         NSLayoutConstraint.activate([
-            indicatorView.topAnchor.constraint(equalTo: tabStackView.bottomAnchor),
-            indicatorView.heightAnchor.constraint(equalToConstant: 3),
-            indicatorLeadingConstraint!,
-            indicatorWidthConstraint!,
+            contentScrollView.topAnchor.constraint(equalTo: tabScrollView.bottomAnchor),
+            contentScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentScrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
-        scrollView.isPagingEnabled = true
-        scrollView.delegate = self
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(scrollView)
+
+        // Content View
+        contentView.axis = .horizontal
+        contentView.distribution = .fillEqually
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentScrollView.addSubview(contentView)
+
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: indicatorView.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            contentView.topAnchor.constraint(equalTo: contentScrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: contentScrollView.bottomAnchor),
+            contentView.leadingAnchor.constraint(equalTo: contentScrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: contentScrollView.trailingAnchor),
+            contentView.heightAnchor.constraint(equalTo: contentScrollView.heightAnchor)
         ])
     }
-    
+
     private func setupTabs() {
-        tabStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        
+        tabButtons.removeAll()
+        tabContainerView.subviews.forEach { $0.removeFromSuperview() }
+
+        var previousButton: UIButton?
+
         for (index, title) in tabs.enumerated() {
-            let button: UIButton = createTabButton(title: title, index: index)
-            tabStackView.addArrangedSubview(button)
+            let button = UIButton(type: .system)
+            button.setTitle(title, for: .normal)
+            button.setTitleColor(ColorConstant.primaryGray, for: .normal)
+            button.titleLabel?.font = FontConstant.poppinsMediumSmall
+            button.tag = index
+            button.addTarget(self, action: #selector(tabTapped(_:)), for: .touchUpInside)
+            button.translatesAutoresizingMaskIntoConstraints = false
+
+            tabContainerView.addSubview(button)
+            tabButtons.append(button)
+
+            if let previous = previousButton {
+                button.leadingAnchor.constraint(equalTo: previous.trailingAnchor, constant: 24).isActive = true
+            } else {
+                button.leadingAnchor.constraint(equalTo: tabContainerView.leadingAnchor, constant: 24).isActive = true
+            }
+
+            NSLayoutConstraint.activate([
+                button.centerYAnchor.constraint(equalTo: tabContainerView.centerYAnchor)
+            ])
+
+            previousButton = button
         }
-        
+
+        previousButton?.trailingAnchor.constraint(equalTo: tabContainerView.trailingAnchor, constant: -24).isActive = true
+
         layoutIfNeeded()
         updateIndicatorPosition(index: 0, animated: false)
-        
+        updateTabButtonStyle(selectedIndex: 0)
     }
-    
-    private func createTabButton(title: String, index: Int) -> UIButton {
-        let button: UIButton = UIButton(type: .system)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(ColorConstant.primaryGray, for: .normal)
-        button.tag = index
-        button.addTarget(self, action: #selector(tabTapped(_:)), for: .touchUpInside)
-        return button
-    }
-    
-    private func setupContentViews() {
-        scrollView.subviews.forEach { $0.removeFromSuperview() }
-        
-        var previousView: UIView?
+
+    private func setupViews() {
+        contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+
         for view in views {
             view.translatesAutoresizingMaskIntoConstraints = false
-            scrollView.addSubview(view)
-            NSLayoutConstraint.activate([
-                view.topAnchor.constraint(equalTo: scrollView.topAnchor),
-                view.widthAnchor.constraint(equalTo: widthAnchor),
-                view.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
-            ])
-            
-            if let previousView = previousView {
-                view.leadingAnchor.constraint(equalTo: previousView.trailingAnchor).isActive = true
-            } else {
-                view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-            }
-            
-            previousView = view
-        }
-        
-        if let lastView = views.last {
-            lastView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
-        }
-
-        updateIndicatorPosition(index: 0, animated: false)
-    }
-    
-    private func updateIndicatorPosition(index: Int, animated: Bool) {
-        guard index >= 0 && index < tabs.count else { return }
-        
-        let tabWidthValue: CGFloat = getTabWidthValue(width: tabWidth)
-        let tabLeadingValue: CGFloat = getTabLeadingValue(width: tabWidth, index: index)
-        currentIndex = index
-        indicatorWidthConstraint?.constant = tabWidthValue
-        
-        if animated {
-            UIView.animate(withDuration: 0.3) {
-                self.indicatorLeadingConstraint?.constant = tabLeadingValue
-                self.layoutIfNeeded()
-            }
-        } else {
-            indicatorLeadingConstraint?.constant = tabLeadingValue
-            layoutIfNeeded()
+            contentView.addArrangedSubview(view)
+            view.widthAnchor.constraint(equalTo: contentScrollView.widthAnchor).isActive = true
         }
     }
-    
-    private func getTabWidthValue(width: CGFloat) -> CGFloat {
-        return width * tabWidthPercentage
-    }
-    
-    private func getTabLeadingValue(width: CGFloat, index: Int) -> CGFloat {
-        return (width * CGFloat(index)) + (width - (width * tabWidthPercentage)) / 2
-    }
-    
-    private func animateIndicator(scrollOffsetX: CGFloat) {
-        guard tabs.count > 0 else { return }
 
-        let percentScrolled = scrollOffsetX / frame.width
-        let newLeading = percentScrolled * tabWidth
-
-        indicatorLeadingConstraint?.constant = newLeading
-        layoutIfNeeded()
-    }
-    
-    @objc 
-    private func tabTapped(_ sender: UIButton) {
+    // MARK: - Actions
+    @objc private func tabTapped(_ sender: UIButton) {
         let index = sender.tag
         currentIndex = index
+        let offset = CGFloat(index) * contentScrollView.frame.width
+        contentScrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+        updateTabButtonStyle(selectedIndex: index)
         updateIndicatorPosition(index: index, animated: true)
-        scrollView.setContentOffset(CGPoint(x: CGFloat(index) * scrollView.frame.width, y: 0), animated: true)
         delegate?.swipeableTabView(self, didSelectTabAt: index)
+    }
+
+    private func updateTabButtonStyle(selectedIndex: Int) {
+        for (index, button) in tabButtons.enumerated() {
+            if index == selectedIndex {
+                button.setTitleColor(ColorConstant.primaryBlack, for: .normal)
+                button.titleLabel?.font = FontConstant.poppinsMediumSmall
+            } else {
+                button.setTitleColor(ColorConstant.primaryGray, for: .normal)
+                button.titleLabel?.font = FontConstant.poppinsMediumSmall
+            }
+        }
+    }
+
+    private func updateIndicatorPosition(index: Int, animated: Bool) {
+        guard index < tabButtons.count else { return }
+        let button = tabButtons[index]
+
+        let indicatorWidth: CGFloat = 40
+        let indicatorX = button.frame.midX - (indicatorWidth / 2)
+        let indicatorY = tabScrollView.frame.height - 2
+
+        let updateFrame = {
+            self.indicatorView.frame = CGRect(x: indicatorX, y: indicatorY, width: indicatorWidth, height: 3)
+            self.indicatorView.layer.cornerRadius = self.indicatorView.frame.height / 2
+            self.indicatorView.clipsToBounds = true
+        }
+
+        if animated {
+            UIView.animate(withDuration: 0.25, animations: updateFrame)
+        } else {
+            updateFrame()
+        }
+
+        scrollTabToVisible(index: index)
+    }
+
+    private func scrollTabToVisible(index: Int) {
+        guard index < tabButtons.count else { return }
+        let button = tabButtons[index]
+        tabScrollView.scrollRectToVisible(button.frame.insetBy(dx: -24, dy: 0), animated: true)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateIndicatorPosition(index: currentIndex, animated: false)
     }
 }
 
+// MARK: - UIScrollViewDelegate
 extension SwipeableTabView: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        animateIndicator(scrollOffsetX: scrollView.contentOffset.x)
-    }
-
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = Int(round(scrollView.contentOffset.x / scrollView.frame.width))
+        currentIndex = index
+        updateTabButtonStyle(selectedIndex: index)
         updateIndicatorPosition(index: index, animated: true)
+        delegate?.swipeableTabView(self, didSelectTabAt: index)
     }
 }
