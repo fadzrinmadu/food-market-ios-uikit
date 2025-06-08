@@ -21,6 +21,12 @@
 		1523AD842DF58D2B00EF3841 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD832DF58D2B00EF3841 /* Int+Extension.swift */; };
 		1523AD872DF58E4500EF3841 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD862DF58E4500EF3841 /* FoodItemCell.swift */; };
 		1523AD8A2DF58F5200EF3841 /* FoodItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD892DF58F5200EF3841 /* FoodItemList.swift */; };
+		1523AD922DF5D3AF00EF3841 /* FoodDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD912DF5D3AF00EF3841 /* FoodDetailProtocol.swift */; };
+		1523AD942DF5D3BB00EF3841 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD932DF5D3BB00EF3841 /* FoodDetailPresenter.swift */; };
+		1523AD962DF5D3CA00EF3841 /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD952DF5D3CA00EF3841 /* FoodDetailRouter.swift */; };
+		1523AD982DF5D3D600EF3841 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD972DF5D3D600EF3841 /* FoodDetailInteractor.swift */; };
+		1523AD9B2DF5D3EC00EF3841 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523AD992DF5D3EC00EF3841 /* FoodDetailViewController.swift */; };
+		1523AD9C2DF5D3EC00EF3841 /* FoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523AD9A2DF5D3EC00EF3841 /* FoodDetailViewController.xib */; };
 		154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1312CA81FBD00078ED4 /* SignInViewController.swift */; };
 		154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154EB1322CA81FBD00078ED4 /* SignInViewController.xib */; };
 		154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EB1352CA8200300078ED4 /* SignInProtocol.swift */; };
@@ -94,6 +100,12 @@
 		1523AD832DF58D2B00EF3841 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		1523AD862DF58E4500EF3841 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
 		1523AD892DF58F5200EF3841 /* FoodItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemList.swift; sourceTree = "<group>"; };
+		1523AD912DF5D3AF00EF3841 /* FoodDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocol.swift; sourceTree = "<group>"; };
+		1523AD932DF5D3BB00EF3841 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
+		1523AD952DF5D3CA00EF3841 /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
+		1523AD972DF5D3D600EF3841 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
+		1523AD992DF5D3EC00EF3841 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		1523AD9A2DF5D3EC00EF3841 /* FoodDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDetailViewController.xib; sourceTree = "<group>"; };
 		154EB1312CA81FBD00078ED4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		154EB1322CA81FBD00078ED4 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		154EB1352CA8200300078ED4 /* SignInProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
@@ -269,6 +281,59 @@
 				1523AD892DF58F5200EF3841 /* FoodItemList.swift */,
 			);
 			path = FoodItemList;
+			sourceTree = "<group>";
+		};
+		1523AD8B2DF5D37E00EF3841 /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD902DF5D39C00EF3841 /* Presenter */,
+				1523AD8F2DF5D39700EF3841 /* Protocol */,
+				1523AD8E2DF5D39200EF3841 /* Router */,
+				1523AD8D2DF5D38D00EF3841 /* Interactor */,
+				1523AD8C2DF5D38800EF3841 /* View */,
+			);
+			path = FoodDetail;
+			sourceTree = "<group>";
+		};
+		1523AD8C2DF5D38800EF3841 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD992DF5D3EC00EF3841 /* FoodDetailViewController.swift */,
+				1523AD9A2DF5D3EC00EF3841 /* FoodDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1523AD8D2DF5D38D00EF3841 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD972DF5D3D600EF3841 /* FoodDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1523AD8E2DF5D39200EF3841 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD952DF5D3CA00EF3841 /* FoodDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1523AD8F2DF5D39700EF3841 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD912DF5D3AF00EF3841 /* FoodDetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1523AD902DF5D39C00EF3841 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1523AD932DF5D3BB00EF3841 /* FoodDetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		154EB12C2CA81E0B00078ED4 /* View */ = {
@@ -663,6 +728,7 @@
 		15EE55E62DE3068700EAF547 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1523AD8B2DF5D37E00EF3841 /* FoodDetail */,
 				15EE55D42DE3013700EAF547 /* FoodHome */,
 			);
 			path = Presentation;
@@ -854,6 +920,7 @@
 			files = (
 				154EB1342CA81FBD00078ED4 /* SignInViewController.xib in Resources */,
 				154EB1462CA839FC00078ED4 /* Poppins-Light.ttf in Resources */,
+				1523AD9C2DF5D3EC00EF3841 /* FoodDetailViewController.xib in Resources */,
 				154EB1512CA8705900078ED4 /* InputTextField.xib in Resources */,
 				154EB1442CA8382F00078ED4 /* HeaderView.xib in Resources */,
 				1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */,
@@ -960,12 +1027,17 @@
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
 				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
 				15CA99ED2DE9EF77003E33E7 /* FoodCard.swift in Sources */,
+				1523AD942DF5D3BB00EF3841 /* FoodDetailPresenter.swift in Sources */,
+				1523AD962DF5D3CA00EF3841 /* FoodDetailRouter.swift in Sources */,
 				15CA99FB2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift in Sources */,
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
 				154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */,
+				1523AD9B2DF5D3EC00EF3841 /* FoodDetailViewController.swift in Sources */,
 				1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */,
 				15CA99F92DEA0009003E33E7 /* FoodCardCell.swift in Sources */,
 				15EE55DC2DE3039B00EAF547 /* FoodHomeViewController.swift in Sources */,
+				1523AD982DF5D3D600EF3841 /* FoodDetailInteractor.swift in Sources */,
+				1523AD922DF5D3AF00EF3841 /* FoodDetailProtocol.swift in Sources */,
 				1585D7F82DD9AC4D000ECF1A /* DropdownView.swift in Sources */,
 				1523AD8A2DF58F5200EF3841 /* FoodItemList.swift in Sources */,
 				15EE55E12DE303DF00EAF547 /* FoodHomeRouter.swift in Sources */,
