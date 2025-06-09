@@ -1,10 +1,9 @@
-Progress [11 / 100%]
+Progress [12 / 100%]
 
 Dev :
-- Implement Swipeable Tab View Component
+- Create Food Detail Screen
+- Create Summary Order Screen
 
 Todo :
-- Fix tab button control
-- Fix tab button swipe animation
 - Force close when click Dropdown button component
 - Snackbar helper doesn't work
