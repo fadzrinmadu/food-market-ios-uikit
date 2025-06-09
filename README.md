@@ -1,8 +1,7 @@
-Progress [12 / 100%]
+Progress [13 / 100%]
 
 Dev :
-- Create Food Detail Screen
-- Create Summary Order Screen
+- Construct Summary Order Screen
 
 Todo :
 - Force close when click Dropdown button component
