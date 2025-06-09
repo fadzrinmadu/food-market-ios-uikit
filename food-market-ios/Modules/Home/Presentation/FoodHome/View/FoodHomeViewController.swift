@@ -53,6 +53,7 @@ class FoodHomeViewController: BaseViewController {
         foodCollectionView.showsHorizontalScrollIndicator = false
         foodCollectionView.register(FoodCardCell.self, forCellWithReuseIdentifier: FoodCardCell.identifier)
         foodCollectionView.dataSource = self
+        foodCollectionView.delegate = self
     }
     
     private func setupSwipeableSegmentedView() {

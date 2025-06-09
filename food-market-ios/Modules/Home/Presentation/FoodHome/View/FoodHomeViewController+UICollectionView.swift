@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension FoodHomeViewController: UICollectionViewDataSource {
+extension FoodHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foodData.count
     }
@@ -19,5 +19,10 @@ extension FoodHomeViewController: UICollectionViewDataSource {
         ) as? FoodCardCell else { return UICollectionViewCell() }
         cell.configure(with: foodData[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController: FoodDetailViewController = FoodDetailRouter.createModule()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

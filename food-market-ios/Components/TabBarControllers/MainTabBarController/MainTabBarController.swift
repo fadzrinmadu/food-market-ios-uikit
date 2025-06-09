@@ -44,7 +44,8 @@ class MainTabBarController: UITabBarController {
     
     private func setupTabBarItems() {
         let foodHomeVC = FoodHomeRouter.createModule()
-        foodHomeVC.tabBarItem = UITabBarItem(
+        let foodHomeNav = UINavigationController(rootViewController: foodHomeVC)
+        foodHomeNav.tabBarItem = UITabBarItem(
             title: "",
             image: ImageConstant.home.withRenderingMode(.alwaysOriginal),
             selectedImage: ImageConstant.homeFilled.withRenderingMode(.alwaysOriginal)
@@ -64,6 +65,6 @@ class MainTabBarController: UITabBarController {
             selectedImage: ImageConstant.profileFilled.withRenderingMode(.alwaysOriginal)
         )
         
-        viewControllers = [foodHomeVC, orderVC, profileVC]
+        viewControllers = [foodHomeNav, orderVC, profileVC]
     }
 }

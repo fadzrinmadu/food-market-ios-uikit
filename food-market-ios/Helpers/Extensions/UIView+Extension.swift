@@ -79,6 +79,18 @@ extension UIView {
         }
         return nil
     }
+
+    func roundCorners(_ corners: UIRectCorner = .allCorners, radius: CGFloat) {
+        layoutIfNeeded() // pastikan bounds valid
+        let path = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
     
     func roundedFull() {
         self.layer.cornerRadius = self.bounds.width / 2

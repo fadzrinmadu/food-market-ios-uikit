@@ -9,7 +9,7 @@ import Foundation
 
 class FoodDetailPresenter: FoodDetailViewToPresenterProtocol {
     var view: FoodDetailPresenterToViewProtocol?
-    var interactor: FoodDetailInteractorToPresenterProtocol?
+    var interactor: FoodDetailPresenterToInteractorProtocol?
     var router: FoodDetailPresenterToRouterProtocol?
 }
 
