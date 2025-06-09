@@ -46,6 +46,12 @@
 		1568051B2DE223820095CEC2 /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568051A2DE223820095CEC2 /* SnackbarView.swift */; };
 		157084CC2DEB1687001689D0 /* SwipeableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157084CB2DEB1687001689D0 /* SwipeableTabView.swift */; };
 		157AEAF72DF7056C00831DDD /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEAF62DF7056C00831DDD /* UILabel+Extension.swift */; };
+		157AEB022DF70AC100831DDD /* OrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEB002DF70AC100831DDD /* OrderSummaryViewController.swift */; };
+		157AEB032DF70AC100831DDD /* OrderSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157AEB012DF70AC100831DDD /* OrderSummaryViewController.xib */; };
+		157AEB052DF70ADD00831DDD /* OrderSummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEB042DF70ADD00831DDD /* OrderSummaryInteractor.swift */; };
+		157AEB072DF70AEE00831DDD /* OrderSummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEB062DF70AEE00831DDD /* OrderSummaryRouter.swift */; };
+		157AEB092DF70B1700831DDD /* OrderSummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEB082DF70B1700831DDD /* OrderSummaryPresenter.swift */; };
+		157AEB0B2DF70B2900831DDD /* OrderSummaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AEB0A2DF70B2900831DDD /* OrderSummaryProtocol.swift */; };
 		157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */; };
 		157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */; };
 		157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157D31F82C9554CB005BF7F8 /* Assets.xcassets */; };
@@ -128,6 +134,12 @@
 		1568051A2DE223820095CEC2 /* SnackbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
 		157084CB2DEB1687001689D0 /* SwipeableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableTabView.swift; sourceTree = "<group>"; };
 		157AEAF62DF7056C00831DDD /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		157AEB002DF70AC100831DDD /* OrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewController.swift; sourceTree = "<group>"; };
+		157AEB012DF70AC100831DDD /* OrderSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSummaryViewController.xib; sourceTree = "<group>"; };
+		157AEB042DF70ADD00831DDD /* OrderSummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryInteractor.swift; sourceTree = "<group>"; };
+		157AEB062DF70AEE00831DDD /* OrderSummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryRouter.swift; sourceTree = "<group>"; };
+		157AEB082DF70B1700831DDD /* OrderSummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryPresenter.swift; sourceTree = "<group>"; };
+		157AEB0A2DF70B2900831DDD /* OrderSummaryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryProtocol.swift; sourceTree = "<group>"; };
 		157D31EC2C9554CA005BF7F8 /* food-market-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-market-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157D31EF2C9554CA005BF7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157D31F12C9554CA005BF7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -466,6 +478,75 @@
 			path = SwipeableTabView;
 			sourceTree = "<group>";
 		};
+		157AEAF82DF70A4C00831DDD /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				157AEAF92DF70A5900831DDD /* Presentation */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		157AEAF92DF70A5900831DDD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				157AEAFA2DF70A6300831DDD /* OrderSummary */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		157AEAFA2DF70A6300831DDD /* OrderSummary */ = {
+			isa = PBXGroup;
+			children = (
+				157AEAFF2DF70A9800831DDD /* Presenter */,
+				157AEAFE2DF70A9200831DDD /* Protocol */,
+				157AEAFD2DF70A8E00831DDD /* Router */,
+				157AEAFC2DF70A8200831DDD /* Interactor */,
+				157AEAFB2DF70A7D00831DDD /* View */,
+			);
+			path = OrderSummary;
+			sourceTree = "<group>";
+		};
+		157AEAFB2DF70A7D00831DDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				157AEB002DF70AC100831DDD /* OrderSummaryViewController.swift */,
+				157AEB012DF70AC100831DDD /* OrderSummaryViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		157AEAFC2DF70A8200831DDD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				157AEB042DF70ADD00831DDD /* OrderSummaryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		157AEAFD2DF70A8E00831DDD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				157AEB062DF70AEE00831DDD /* OrderSummaryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		157AEAFE2DF70A9200831DDD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				157AEB0A2DF70B2900831DDD /* OrderSummaryProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		157AEAFF2DF70A9800831DDD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				157AEB082DF70B1700831DDD /* OrderSummaryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		157D31E32C9554CA005BF7F8 = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +847,7 @@
 			children = (
 				15F294FF2CA7E22B00FA1A0E /* Authentication */,
 				15EE55D32DE300DD00EAF547 /* Home */,
+				157AEAF82DF70A4C00831DDD /* Order */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -932,6 +1014,7 @@
 				1585D7FA2DD9AC55000ECF1A /* DropdownView.xib in Resources */,
 				15F2950B2CA7ED9C00FA1A0E /* Poppins-Medium.ttf in Resources */,
 				1585D7EC2DD98EA5000ECF1A /* SignUpAddressViewController.xib in Resources */,
+				157AEB032DF70AC100831DDD /* OrderSummaryViewController.xib in Resources */,
 				157D31F92C9554CB005BF7F8 /* Assets.xcassets in Resources */,
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
 				15EE55DD2DE3039B00EAF547 /* FoodHomeViewController.xib in Resources */,
@@ -1004,6 +1087,7 @@
 				157AEAF72DF7056C00831DDD /* UILabel+Extension.swift in Sources */,
 				15CA99E72DE9DCAE003E33E7 /* ImageConstant.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
+				157AEB072DF70AEE00831DDD /* OrderSummaryRouter.swift in Sources */,
 				15EEBCA12DE228B000DBE24E /* UIViewController+Extension.swift in Sources */,
 				15EE55E32DE303E900EAF547 /* FoodHomeProtocol.swift in Sources */,
 				1523AD842DF58D2B00EF3841 /* Int+Extension.swift in Sources */,
@@ -1014,6 +1098,7 @@
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
 				15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */,
 				1523AD802DF5895100EF3841 /* FoodItem.swift in Sources */,
+				157AEB092DF70B1700831DDD /* OrderSummaryPresenter.swift in Sources */,
 				15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */,
 				151ED1EE2DD3727800CA3FD8 /* SignUpProtocol.swift in Sources */,
 				15EE55DF2DE303BD00EAF547 /* FoodHomeInteractor.swift in Sources */,
@@ -1031,11 +1116,14 @@
 				154EB1362CA8200300078ED4 /* SignInProtocol.swift in Sources */,
 				1523AD872DF58E4500EF3841 /* FoodItemCell.swift in Sources */,
 				151ED1F12DD3754600CA3FD8 /* SignUpViewController.swift in Sources */,
+				157AEB052DF70ADD00831DDD /* OrderSummaryInteractor.swift in Sources */,
 				15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */,
 				157D31F22C9554CA005BF7F8 /* SceneDelegate.swift in Sources */,
 				154EB1332CA81FBD00078ED4 /* SignInViewController.swift in Sources */,
 				15CA99ED2DE9EF77003E33E7 /* FoodCard.swift in Sources */,
+				157AEB0B2DF70B2900831DDD /* OrderSummaryProtocol.swift in Sources */,
 				1523AD942DF5D3BB00EF3841 /* FoodDetailPresenter.swift in Sources */,
+				157AEB022DF70AC100831DDD /* OrderSummaryViewController.swift in Sources */,
 				1523AD962DF5D3CA00EF3841 /* FoodDetailRouter.swift in Sources */,
 				15CA99FB2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift in Sources */,
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
