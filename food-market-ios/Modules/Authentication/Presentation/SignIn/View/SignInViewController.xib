@@ -176,10 +176,10 @@
     </objects>
     <designables>
         <designable name="Q5v-bn-Sfn">
-            <size key="intrinsicContentSize" width="75.666666666666671" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
         <designable name="pr3-1t-rHq">
-            <size key="intrinsicContentSize" width="180.66666666666666" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

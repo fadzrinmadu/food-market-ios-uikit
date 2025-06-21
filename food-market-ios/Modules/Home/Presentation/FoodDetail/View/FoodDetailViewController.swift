@@ -97,6 +97,11 @@ class FoodDetailViewController: ContentViewController {
     private func backButtonPressed() {
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func orderNowButtonPressed(_ sender: Any) {
+        let viewController: OrderSummaryViewController = OrderSummaryRouter.createModule()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension FoodDetailViewController: FoodDetailPresenterToViewProtocol {

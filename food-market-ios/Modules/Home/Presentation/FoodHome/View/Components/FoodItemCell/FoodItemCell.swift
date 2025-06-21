@@ -10,7 +10,7 @@ import UIKit
 class FoodItemCell: UICollectionViewCell {
     static let identifier: String = "FoodItemCell"
     
-    private let foodItem: FoodItem = FoodItem()
+    private let foodItem: FoodItemView = FoodItemView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +22,7 @@ class FoodItemCell: UICollectionViewCell {
         commonInit()
     }
     
-    func configure(with data: FoodItemData) {
+    func configure(with data: FoodItemViewData) {
         foodItem.setData(data: data)
     }
     

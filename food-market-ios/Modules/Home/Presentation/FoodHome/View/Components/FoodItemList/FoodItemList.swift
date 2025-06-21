@@ -8,10 +8,10 @@
 import UIKit
 
 class FoodItemList: UIView {
-    private let foodData: [FoodItemData] = [
-        FoodItemData(image: DummyConstant.Image.foodItem1Dummy, title: "Soup Bumil", price: 289000, rating: 4.1),
-        FoodItemData(image: DummyConstant.Image.foodItem2Dummy, title: "Chicken", price: 4509000, rating: 4.7),
-        FoodItemData(image: DummyConstant.Image.foodItem3Dummy, title: "Shrimp", price: 999000, rating: 3.2),
+    private let foodData: [FoodItemViewData] = [
+        FoodItemViewData(image: DummyConstant.Image.foodItem1Dummy, title: "Soup Bumil", price: 289000, rating: 4.1),
+        FoodItemViewData(image: DummyConstant.Image.foodItem2Dummy, title: "Chicken", price: 4509000, rating: 4.7),
+        FoodItemViewData(image: DummyConstant.Image.foodItem3Dummy, title: "Shrimp", price: 999000, rating: 3.2),
     ]
 
     private lazy var collectionView: UICollectionView = {

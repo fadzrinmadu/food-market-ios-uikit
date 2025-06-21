@@ -15,6 +15,7 @@ enum DummyConstant {
         static let foodItem1Dummy: UIImage = UIImage(named: "FoodItem1Dummy") ?? UIImage()
         static let foodItem2Dummy: UIImage = UIImage(named: "FoodItem2Dummy") ?? UIImage()
         static let foodItem3Dummy: UIImage = UIImage(named: "FoodItem3Dummy") ?? UIImage()
+        static let foodSummaryDummy: UIImage = UIImage(named: "FoodSummaryDummy") ?? UIImage()
         static let profileDummy: UIImage = UIImage(named: "ProfileDummy") ?? UIImage()
     }
 }

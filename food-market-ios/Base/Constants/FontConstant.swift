@@ -14,5 +14,6 @@ enum FontConstant {
     static let poppinsRegular = UIFont(name: "Poppins-Regular", size: 16)
     static let poppinsRegularSmall = UIFont(name: "Poppins-Regular", size: 14)
     static let poppinsRegularXSmall = UIFont(name: "Poppins-Regular", size: 12)
+    static let poppinsRegularXXSmall = UIFont(name: "Poppins-Regular", size: 10)
     static let poppinsLightSmall = UIFont(name: "Poppins-Light", size: 14)
 }
