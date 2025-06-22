@@ -1,7 +1,7 @@
-Progress [16 / 100%]
+Progress [20 / 100%]
 
 Dev :
-- Construct Success Order Screen
+- Construct Empty Order Screen
 
 Todo :
 - Force close when click Dropdown button component
