@@ -73,6 +73,12 @@
 		15CA99F62DE9FA32003E33E7 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CA99F52DE9FA32003E33E7 /* RatingView.xib */; };
 		15CA99F92DEA0009003E33E7 /* FoodCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99F82DEA0009003E33E7 /* FoodCardCell.swift */; };
 		15CA99FB2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA99FA2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift */; };
+		15DDAE5B2E07B0BA001DD81D /* SuccessOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDAE592E07B0BA001DD81D /* SuccessOrderViewController.swift */; };
+		15DDAE5C2E07B0BA001DD81D /* SuccessOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DDAE5A2E07B0BA001DD81D /* SuccessOrderViewController.xib */; };
+		15DDAE5E2E07B0DC001DD81D /* SuccessOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDAE5D2E07B0DC001DD81D /* SuccessOrderInteractor.swift */; };
+		15DDAE602E07B0F0001DD81D /* SuccessOrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDAE5F2E07B0F0001DD81D /* SuccessOrderRouter.swift */; };
+		15DDAE622E07B100001DD81D /* SuccessOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDAE612E07B100001DD81D /* SuccessOrderProtocol.swift */; };
+		15DDAE642E07B110001DD81D /* SuccessOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDAE632E07B110001DD81D /* SuccessOrderPresenter.swift */; };
 		15EE55C72DE2439100EAF547 /* SuccessSignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */; };
 		15EE55C92DE243A700EAF547 /* SuccessSignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */; };
 		15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */; };
@@ -164,6 +170,12 @@
 		15CA99F52DE9FA32003E33E7 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		15CA99F82DEA0009003E33E7 /* FoodCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCell.swift; sourceTree = "<group>"; };
 		15CA99FA2DEA03DB003E33E7 /* FoodHomeViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodHomeViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		15DDAE592E07B0BA001DD81D /* SuccessOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderViewController.swift; sourceTree = "<group>"; };
+		15DDAE5A2E07B0BA001DD81D /* SuccessOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessOrderViewController.xib; sourceTree = "<group>"; };
+		15DDAE5D2E07B0DC001DD81D /* SuccessOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderInteractor.swift; sourceTree = "<group>"; };
+		15DDAE5F2E07B0F0001DD81D /* SuccessOrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderRouter.swift; sourceTree = "<group>"; };
+		15DDAE612E07B100001DD81D /* SuccessOrderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderProtocol.swift; sourceTree = "<group>"; };
+		15DDAE632E07B110001DD81D /* SuccessOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderPresenter.swift; sourceTree = "<group>"; };
 		15EE55C62DE2439100EAF547 /* SuccessSignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpPresenter.swift; sourceTree = "<group>"; };
 		15EE55C82DE243A700EAF547 /* SuccessSignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpRouter.swift; sourceTree = "<group>"; };
 		15EE55CA2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignUpInteractor.swift; sourceTree = "<group>"; };
@@ -493,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				157AEAFA2DF70A6300831DDD /* OrderSummary */,
+				15DDAE532E07B06F001DD81D /* SuccessOrder */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -696,6 +709,59 @@
 				15CA99F82DEA0009003E33E7 /* FoodCardCell.swift */,
 			);
 			path = FoodCardCell;
+			sourceTree = "<group>";
+		};
+		15DDAE532E07B06F001DD81D /* SuccessOrder */ = {
+			isa = PBXGroup;
+			children = (
+				15DDAE582E07B0AA001DD81D /* Presenter */,
+				15DDAE572E07B0A6001DD81D /* Protocol */,
+				15DDAE562E07B09D001DD81D /* Router */,
+				15DDAE552E07B091001DD81D /* Interactor */,
+				15DDAE542E07B08A001DD81D /* View */,
+			);
+			path = SuccessOrder;
+			sourceTree = "<group>";
+		};
+		15DDAE542E07B08A001DD81D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DDAE592E07B0BA001DD81D /* SuccessOrderViewController.swift */,
+				15DDAE5A2E07B0BA001DD81D /* SuccessOrderViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DDAE552E07B091001DD81D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				15DDAE5D2E07B0DC001DD81D /* SuccessOrderInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		15DDAE562E07B09D001DD81D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				15DDAE5F2E07B0F0001DD81D /* SuccessOrderRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		15DDAE572E07B0A6001DD81D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				15DDAE612E07B100001DD81D /* SuccessOrderProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		15DDAE582E07B0AA001DD81D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				15DDAE632E07B110001DD81D /* SuccessOrderPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		15EE55C02DE2432700EAF547 /* SuccessSignUp */ = {
@@ -1030,6 +1096,7 @@
 				151ED1F22DD3754600CA3FD8 /* SignUpViewController.xib in Resources */,
 				15EE55DD2DE3039B00EAF547 /* FoodHomeViewController.xib in Resources */,
 				15EE55D22DE2FBA500EAF547 /* Poppins-Regular.ttf in Resources */,
+				15DDAE5C2E07B0BA001DD81D /* SuccessOrderViewController.xib in Resources */,
 				15EEBC9F2DE225A100DBE24E /* SnackbarView.xib in Resources */,
 				157D31FC2C9554CB005BF7F8 /* Base in Resources */,
 				152329AB2DD8B06D00F67B08 /* PhotoProfileView.xib in Resources */,
@@ -1090,12 +1157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				151ED1F62DD375EA00CA3FD8 /* SignUpRouter.swift in Sources */,
+				15DDAE5E2E07B0DC001DD81D /* SuccessOrderInteractor.swift in Sources */,
 				1585D7F12DD98ECB000ECF1A /* SignUpAddressRouter.swift in Sources */,
 				15CA99E52DE9D6EC003E33E7 /* MainTabBarController.swift in Sources */,
 				15EE55CB2DE2E03C00EAF547 /* SuccessSignUpInteractor.swift in Sources */,
 				15CA99E92DE9EE5A003E33E7 /* DummyConstant.swift in Sources */,
 				154EB13A2CA821F200078ED4 /* SignInPresenter.swift in Sources */,
 				157AEAF72DF7056C00831DDD /* UILabel+Extension.swift in Sources */,
+				15DDAE622E07B100001DD81D /* SuccessOrderProtocol.swift in Sources */,
 				15CA99E72DE9DCAE003E33E7 /* ImageConstant.swift in Sources */,
 				157D31F02C9554CA005BF7F8 /* AppDelegate.swift in Sources */,
 				157AEB072DF70AEE00831DDD /* OrderSummaryRouter.swift in Sources */,
@@ -1109,12 +1178,14 @@
 				15F36BB52E07112700D7F82A /* SummarySectionView.swift in Sources */,
 				151ED1FC2DD3788300CA3FD8 /* MainButton.swift in Sources */,
 				15EE55CE2DE2E05600EAF547 /* SuccessSignUpViewController.swift in Sources */,
+				15DDAE5B2E07B0BA001DD81D /* SuccessOrderViewController.swift in Sources */,
 				1523AD802DF5895100EF3841 /* FoodItemView.swift in Sources */,
 				157AEB092DF70B1700831DDD /* OrderSummaryPresenter.swift in Sources */,
 				15EE55D12DE2E09B00EAF547 /* SuccessSignUpProtocol.swift in Sources */,
 				151ED1EE2DD3727800CA3FD8 /* SignUpProtocol.swift in Sources */,
 				15EE55DF2DE303BD00EAF547 /* FoodHomeInteractor.swift in Sources */,
 				154EB14F2CA8704D00078ED4 /* InputTextField.swift in Sources */,
+				15DDAE602E07B0F0001DD81D /* SuccessOrderRouter.swift in Sources */,
 				151ED1F82DD3761F00CA3FD8 /* SignUpPresenter.swift in Sources */,
 				154EB1482CA84F2900078ED4 /* UIView+Extension.swift in Sources */,
 				154EB13C2CA8225300078ED4 /* SignInRouter.swift in Sources */,
@@ -1141,6 +1212,7 @@
 				154EB13F2CA837B300078ED4 /* HeaderView.swift in Sources */,
 				154EB1562CA8789600078ED4 /* ColorConstant.swift in Sources */,
 				1523AD9B2DF5D3EC00EF3841 /* FoodDetailViewController.swift in Sources */,
+				15DDAE642E07B110001DD81D /* SuccessOrderPresenter.swift in Sources */,
 				1585D7F32DD98EE3000ECF1A /* SignUpAddressPresenter.swift in Sources */,
 				15CA99F92DEA0009003E33E7 /* FoodCardCell.swift in Sources */,
 				15EE55DC2DE3039B00EAF547 /* FoodHomeViewController.swift in Sources */,
