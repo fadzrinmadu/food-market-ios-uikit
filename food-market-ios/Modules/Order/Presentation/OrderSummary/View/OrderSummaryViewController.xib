@@ -151,6 +151,9 @@
                                             <real key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="checkoutButtonPressed:" destination="-1" eventType="touchUpInside" id="80A-UO-gNx"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -185,6 +188,11 @@
             <point key="canvasLocation" x="-57.251908396946561" y="19.718309859154932"/>
         </view>
     </objects>
+    <designables>
+        <designable name="h3q-zl-jyW">
+            <size key="intrinsicContentSize" width="135.66666666666666" height="34.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
         <namedColor name="BackgroundColor">
             <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

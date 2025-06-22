@@ -69,6 +69,11 @@ class OrderSummaryViewController: ContentViewController {
         itemOrderedLabel.textColor = ColorConstant.primaryBlack
         itemOrderedLabel.font = FontConstant.poppinsRegularSmall
     }
+    
+    @IBAction func checkoutButtonPressed(_ sender: Any) {
+        let viewController: SuccessOrderViewController = SuccessOrderRouter.createModule()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension OrderSummaryViewController: OrderSummaryPresenterToViewProtocol {
